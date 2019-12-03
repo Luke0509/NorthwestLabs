@@ -16,3 +16,10 @@ textarea {
     max-width: 280px;
 }*/
 
+.nav-item {
+    font-size: 18px;
+}
+.navbar-brand {
+    font-size: 30px;
+}
+
