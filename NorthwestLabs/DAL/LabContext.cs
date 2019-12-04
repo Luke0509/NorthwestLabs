@@ -1,4 +1,4 @@
-﻿// using NorthwestLabs.Models;
+﻿using NorthwestLabs.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -19,5 +19,6 @@ namespace NorthwestLabs.DAL
 
         //public DbSet<model> model {get; set; } 
 
+        public DbSet<Customer> Customers { get; set; }
     }
 }
