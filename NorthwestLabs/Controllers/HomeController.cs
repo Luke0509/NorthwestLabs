@@ -34,39 +34,39 @@ namespace NorthwestLabs.Controllers
 
             String email = form["Email address"].ToString();
             String password = form["Password"].ToString();
-            Customer newCust = new Customer();
-            Employee newEmp = new Employee();
-            newCust = db.Customers.FirstOrDefault(x => x.Cust_Email == email);
-            newEmp = db.Employees.FirstOrDefault(x => x.Employee_Email == email);
-            if (newEmp != null)
+            //Customer currentCust = new Customer();
+            //Employee currentEmp = new Employee();
+            currentCust = db.Customers.FirstOrDefault(x => x.Cust_Email == email);
+            currentEmployee = db.Employees.FirstOrDefault(x => x.Employee_Email == email);
+            if (currentEmployee != null)
             {
                 //it's an employee email
-                if (currentEmployee.Employee_Password == password)
+                if (currentEmployeeloyee.Employee_Password == password)
                 {
                     FormsAuthentication.SetAuthCookie(email, rememberMe);
                     //authenticate
 
-                    if (newEmp.Employee_Role_ID == 1)
+                    if (currentEmployee.Employee_Role_ID == 1)
                     {
                         return RedirectToAction("Index", "SalesRep");
                     }
-                    else if (newEmp.Employee_Role_ID == 2)
+                    else if (currentEmployee.Employee_Role_ID == 2)
                     {
                         return RedirectToAction("Index", "BR");
                     }
-                    else if (newEmp.Employee_Role_ID == 3)
+                    else if (currentEmployee.Employee_Role_ID == 3)
                     {
                         return RedirectToAction("Index", "SingaporeEmployee");
                     }
-                    else if (newEmp.Employee_Role_ID == 4)
+                    else if (currentEmployee.Employee_Role_ID == 4)
                     {
                         return RedirectToAction("Index", "TechDirector");
                     }
-                    else if (newEmp.Employee_Role_ID == 5)
+                    else if (currentEmployee.Employee_Role_ID == 5)
                     {
                         return RedirectToAction("Index", "SeattleEmployee");
                     }
-                    else if (newEmp.Employee_Role_ID == 7)
+                    else if (currentEmployee.Employee_Role_ID == 7)
                     {
                         return RedirectToAction("Index", "Manager");
                     }
