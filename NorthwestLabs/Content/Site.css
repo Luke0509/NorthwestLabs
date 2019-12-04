@@ -30,3 +30,18 @@ body {
     background-color: #EAEAEA;
 }
 
+.bg{
+    margin-left: -250px;
+    margin-top: -20px;
+    margin-right: -20px;
+}
+.centered {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 65px;
+    color: #E92E35;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+ 
