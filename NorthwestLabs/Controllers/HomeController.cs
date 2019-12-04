@@ -31,11 +31,8 @@ namespace NorthwestLabs.Controllers
         [HttpPost]
         public ActionResult Login(FormCollection form, bool rememberMe = false)
         {
-
             String email = form["Email address"].ToString();
             String password = form["Password"].ToString();
-            //Customer currentCust = new Customer();
-            //Employee currentEmp = new Employee();
             currentCust = db.Customers.FirstOrDefault(x => x.Cust_Email == email);
             currentEmployee = db.Employees.FirstOrDefault(x => x.Employee_Email == email);
             if (currentEmployee != null)
@@ -100,6 +97,52 @@ namespace NorthwestLabs.Controllers
             }
             return View();
         }
+
+
+        public ActionResult Profile()
+        {
+            if (currentEmployee != null)
+            {
+                //user is an employee
+                return RedirectToAction("EmployeeProfile", "Home");//, currentEmployee);
+            }
+            
+                /*
+                ViewBag.Type = "Employee";
+                ViewBag.Name = currentEmployee.Employee_First_Name + " " + currentEmployee.Employee_Last_Name;
+                if (currentEmployee.Employee_State != null)
+                {
+                    ViewBag.Address = currentEmployee.Employee_Address + " " +
+                                    currentEmployee.Employee_City + ", " + currentEmployee.Employee_State;
+                }
+                else
+                {
+                    ViewBag.Address = currentEmployee.Employee_Address + " " +
+                                    currentEmployee.Employee_City;
+                }
+                ViewBag.Country = currentEmployee.Employee_Country;
+                ViewBag.Zip = currentEmployee.Employee_Zip;
+                ViewBag.Email = currentEmployee.Employee_Email;
+                */
+           
+
+            else if (currentCust != null)
+            {
+                //user is a customer
+                return RedirectToAction("CustProfile", "Home");//, currentCust);
+            }
+            return View();
+        }
+
+        public ActionResult EmployeeProfile()
+        {
+            return View(currentEmployee);
+        }
+        public ActionResult CustProfile()
+        {
+            return View(currentCust);
+        }
+
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
