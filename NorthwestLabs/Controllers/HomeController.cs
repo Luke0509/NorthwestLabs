@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace NorthwestLabs.Controllers
 {
@@ -38,7 +39,12 @@ namespace NorthwestLabs.Controllers
                 //it's an employee email
                 if (newEmp.Employee_Password == password)
                 {
+                    FormsAuthentication.SetAuthCookie(email, rememberMe);
                     //authenticate
+                }
+                else
+                {
+                    ViewBag.PasswordMessage = "Password is incorrect";
                 }
 
             }
@@ -47,8 +53,17 @@ namespace NorthwestLabs.Controllers
                 //it's a customer email
                 if (newCust.Cust_Password == password)
                 {
+                    FormsAuthentication.SetAuthCookie(email, rememberMe);
                     //authenticate
                 }
+                else
+                {
+                    ViewBag.PasswordMessage = "Password is incorrect";
+                }
+            }
+            else
+            {
+                ViewBag.PasswordMessage = "There is no account with that Email address. Please try another Email."
             }
             return View();
             }
