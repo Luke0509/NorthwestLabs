@@ -33,6 +33,6 @@ namespace NorthwestLabs.Models
         [Display(Name = "Employee Country")]
         public string Employee_Country { get; set; }
         [Display(Name = "Employee Zip")]
-        public int Employee_Zip { get; set; }
+        public string Employee_Zip { get; set; }
     }
 }

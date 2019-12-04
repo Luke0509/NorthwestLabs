@@ -32,7 +32,7 @@ namespace NorthwestLabs.Models
         public string Cust_Phone { get; set; }
         public DateTime Account_Created_Date { get; set; }
         [DisplayName("Discount")]
-        public float Cust_Discount { get; set; }
+        public double Cust_Discount { get; set; }
 
     }
 }
