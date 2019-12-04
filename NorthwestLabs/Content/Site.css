@@ -31,13 +31,16 @@ body {
 }
 body, html{
     height: 100%;
+   
 }
 .bgImage {
-    
-    /* Full height */
-    height: 100%;
+    background-image: url('Pictures/louis-reed-pwcKF7L4-no-unsplash.jpg');
     /* Center and scale the image nicely */
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-size: 100% 400px;
+    opacity: 0.5;
+    height: 400px;
+    width: 100%
+  
 }
