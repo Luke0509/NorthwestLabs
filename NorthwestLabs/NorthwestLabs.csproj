@@ -131,6 +131,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Assay.cs" />
+    <Compile Include="Models\Compounds.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\WorkOrders.cs" />
@@ -152,8 +153,6 @@
     <Content Include="Views\SalesRep\Index.cshtml" />
     <Content Include="Views\SingaporeEmployee\Index.cshtml" />
     <Content Include="Views\TechDirector\Index.cshtml" />
-    <Content Include="Views\Shared\_AuthLayout.cshtml" />
-    <Content Include="Views\Home\EmployeeProfile.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
