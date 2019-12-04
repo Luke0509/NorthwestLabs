@@ -116,13 +116,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BRController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManagerController.cs" />
+    <Compile Include="Controllers\SalesRepController.cs" />
+    <Compile Include="Controllers\SeattleEmployeeController.cs" />
+    <Compile Include="Controllers\SingaporeEmployeeController.cs" />
+    <Compile Include="Controllers\TechDirectorController.cs" />
     <Compile Include="DAL\LabContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\WorkOrders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +153,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\BR\" />
+    <Folder Include="Views\Customer\" />
+    <Folder Include="Views\Manager\" />
+    <Folder Include="Views\SalesRep\" />
+    <Folder Include="Views\SeattleEmployee\" />
+    <Folder Include="Views\SingaporeEmployee\" />
+    <Folder Include="Views\TechDirector\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
