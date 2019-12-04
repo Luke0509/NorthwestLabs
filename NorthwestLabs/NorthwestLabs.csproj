@@ -144,6 +144,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Manager\Index.cshtml" />
+    <Content Include="Views\SalesRep\Index.cshtml" />
+    <Content Include="Views\SingaporeEmployee\Index.cshtml" />
+    <Content Include="Views\TechDirector\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -154,12 +159,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\BR\" />
-    <Folder Include="Views\Customer\" />
-    <Folder Include="Views\Manager\" />
-    <Folder Include="Views\SalesRep\" />
     <Folder Include="Views\SeattleEmployee\" />
-    <Folder Include="Views\SingaporeEmployee\" />
-    <Folder Include="Views\TechDirector\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

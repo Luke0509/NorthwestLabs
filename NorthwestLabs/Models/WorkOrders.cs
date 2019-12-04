@@ -21,17 +21,17 @@ namespace NorthwestLabs.Models
         public int Employee_ID { get; set; }
 
         [DisplayName("Start Date")]
-        public string Date_Created { get; set; }
+        public DateTime Date_Created { get; set; }
 
         [DisplayName("Finish Date")]
-        public string Date_Completed { get; set; }
+        public DateTime? Date_Completed { get; set; }
 
         [DisplayName("Work Order Discount")]
-        public float WO_Discount { get; set; }
+        public double WO_Discount { get; set; }
 
         [Range(0, 1)]
         [DisplayName("Order Expedited")]
-        public int ExpediteOrder { get; set; }
+        public int Expedite_Order { get; set; }
 
         [Range(0, 1)]
         public int Test2_IfActive { get; set; }
