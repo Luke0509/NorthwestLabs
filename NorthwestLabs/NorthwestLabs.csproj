@@ -103,6 +103,8 @@
     <Content Include="Content\Pictures\louis-reed-pwcKF7L4-no-unsplash.jpg" />
     <Content Include="Content\Pictures\northwestlabs.png" />
     <Content Include="Content\Pictures\personSilhouette.jpg" />
+    <Content Include="Content\Pictures\Seattle.jpg" />
+    <Content Include="Content\Pictures\Singapore.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

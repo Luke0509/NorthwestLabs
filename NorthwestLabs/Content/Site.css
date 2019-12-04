@@ -22,17 +22,16 @@ textarea {
 .navbar-brand {
     font-size: 30px;
 }
-body {
 
-}
 
 .myBody {
     background-color: #EAEAEA;
 }
-body, html{
+/*body, html{
     height: 100%;
    
 }
+ */
 .bgImage {
     background-image: url('Pictures/louis-reed-pwcKF7L4-no-unsplash.jpg');
     /* Center and scale the image nicely */
@@ -41,27 +40,65 @@ body, html{
     background-size: 100% 400px;
     opacity: 0.5;
     height: 400px;
-    width: 100%
-  
+    width: 100%;
+}
+.name {
+    color: #F31C25;
+    font-size: 64px;
+    text-align: center;
+    display: block;
+}
+.headers{
+    display:block;
+    text-align:center;
+    font-size: 35px;
+}
+.aboutPage {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+   
+}
+.column {
+    float: left;
+    width: 50%;
+    
+    position:relative;
 }
 
-
-/*.no-padding {
-    padding-left: 0;
-    padding-right: 0;
-    height: 200px;
-    width: 100%
+/* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+    position:relative;
+    width: 50%;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #F31C25;
 }
 
+.column:hover .overlay {
+    opacity: .8;
+}
 
-
-.full-width-image {
-    width: 100vw;
-    position: relative;
+.text {
+    color: white;
+    font-size: 28px;
+    position: absolute;
+    top: 50%;
     left: 50%;
-    margin-left: -50vw;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
-
-    .full-width-image img {
-        width: 100%;
-    } */
