@@ -17,17 +17,14 @@ namespace NorthwestLabs.Controllers
         {
             return View();
         }
-
         [HttpGet]
         public ActionResult Login()
         {
             return View();
         }
-
         [HttpPost]
         public ActionResult Login(FormCollection form, bool rememberMe = false)
         {
-            
             String email = form["Email address"].ToString();
             String password = form["Password"].ToString();
             var newCust = new Customer();
@@ -41,6 +38,7 @@ namespace NorthwestLabs.Controllers
                 {
                     FormsAuthentication.SetAuthCookie(email, rememberMe);
                     //authenticate
+                    //if statements here to determine view depending on role
                 }
                 else
                 {
@@ -66,7 +64,13 @@ namespace NorthwestLabs.Controllers
                 ViewBag.PasswordMessage = "There is no account associated with that Email address. Please try another Email.";
             }
             return View();
-            }
-
+        }
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon(); // it will clear the session at the end of request
+            return RedirectToAction("Login", "Home");
+        }
     }
+
 }
