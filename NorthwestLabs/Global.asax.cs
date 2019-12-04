@@ -10,7 +10,7 @@ using NorthwestLabs.DAL;
 using System.Data.Entity;
 using NorthwestLabs;
 
-namespace PlayBall
+namespace NorthwestLabs
 {
     public class MvcApplication : System.Web.HttpApplication
     {
