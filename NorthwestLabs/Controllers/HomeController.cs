@@ -63,7 +63,7 @@ namespace NorthwestLabs.Controllers
             }
             else
             {
-                ViewBag.PasswordMessage = "There is no account with that Email address. Please try another Email.";
+                ViewBag.PasswordMessage = "There is no account associated with that Email address. Please try another Email.";
             }
             return View();
             }
