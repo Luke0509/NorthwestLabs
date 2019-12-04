@@ -27,8 +27,8 @@ namespace NorthwestLabs.Controllers
         {
             String email = form["Email address"].ToString();
             String password = form["Password"].ToString();
-            var newCust = new Customer();
-            var newEmp = new Employee();
+            Customer newCust = new Customer();
+            Employee newEmp = new Employee();
             newCust = db.Customers.FirstOrDefault(x => x.Cust_Email == email);
             newEmp = db.Employees.FirstOrDefault(x => x.Employee_Email == email);
             if (newEmp != null)

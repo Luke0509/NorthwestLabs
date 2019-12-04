@@ -23,6 +23,10 @@ namespace NorthwestLabs.Models
         public string Cust_City { get; set; }
         [DisplayName("State")]
         public string Cust_State { get; set; }
+        [DisplayName("State")]
+        public string Cust_Country { get; set; }
+        [DisplayName("State")]
+        public string Cust_Zip { get; set; }
         [DisplayName("Email Address")]
         [EmailAddress(ErrorMessage ="Please enter a valid Email address")]
         public string Cust_Email { get; set; }
@@ -30,6 +34,7 @@ namespace NorthwestLabs.Models
         public string Cust_Password { get; set; }
         [DisplayName("Phone Number")]
         public string Cust_Phone { get; set; }
+        [DisplayName("Date of Account Creation")]
         public DateTime Account_Created_Date { get; set; }
         [DisplayName("Discount")]
         public double Cust_Discount { get; set; }
