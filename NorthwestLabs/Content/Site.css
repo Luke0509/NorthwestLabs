@@ -22,7 +22,9 @@ textarea {
 .navbar-brand {
     font-size: 30px;
 }
-
+html, body, h1, h2, h3 {
+    font-family:'Solway', serif !important;
+}
 
 .myBody {
     background-color: #EAEAEA;
@@ -32,25 +34,35 @@ textarea {
    
 }
  */
+
 .bgImage {
+    padding-top: -10%;
     background-image: url('Pictures/louis-reed-pwcKF7L4-no-unsplash.jpg');
-    /* Center and scale the image nicely */
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover !important;
     background-size: 100% 400px;
     opacity: 0.5;
     height: 400px;
-    width: 100%;
+    width: 100% !important;
+    align-content:center;
 }
+
 .name {
     color: #F31C25;
-    font-size: 64px;
+    font-size: 80px;
     text-align: center;
     display: block;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1.0;
+    
 }
-.headers{
-    display:block;
-    text-align:center;
+.headers {
+    
+    display: block;
+    text-align: center;
     font-size: 35px;
 }
 .aboutPage {
@@ -101,4 +113,24 @@ textarea {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
+}
+table, td, th {
+    border: 4px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+    
+}
+th {
+    font-size: 22px;
+}
+td{
+    font-size: 20px;
 }

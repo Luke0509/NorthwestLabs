@@ -18,6 +18,11 @@ namespace NorthwestLabs.Controllers
             return View();
         }
 
+        public ActionResult Catalog()
+        {
+            return View();
+        }
+
         [HttpGet]
         public ActionResult Login()
         {
