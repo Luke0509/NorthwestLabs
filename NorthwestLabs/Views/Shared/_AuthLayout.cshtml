@@ -23,16 +23,16 @@
 <body class="myBody">
 
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white">
-        <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+        <a class="navbar-brand" href="@Url.Action("Index", "Home" )">
             <img src="~/Content/Pictures/northwestlabs.png" width="180" height="50" class="d-inline-block align-top" alt="">
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="@Url.Action("Index", "Home")">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="@Url.Action("Index", "Home" )">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="@Url.Action("Index", "Home")">About</a>
+                    <a class="nav-link" href="@Url.Action("Index", "Home" )">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="@Url.Action("Index", "Home")">Contact</a>
@@ -43,9 +43,9 @@
                 <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" style="font-size: 14px">Search</button>
             </form>
             <ul class="navbar-nav navbar-right">
-                
-                <img src="~/Content/Pictures/personSilhouette.jpg" onclick="@Url.Action("Profile","Home")/>
-                <a class="nav-item  nav-link" ref="@Url.Action("Login", "Home")">Logout</a>
+                <a  href="@Url.Action("Profile", "Home" )"> <img src="~/Content/Pictures/personSilhouette.jpg" style="padding-left:30px; padding-right: 0px;"/>
+                </a>
+                <a class="nav-item  nav-link" href="@Url.Action("Logout", "Home" )">|  Logout</a>
             </ul>
 
 
@@ -55,7 +55,9 @@
 
     <div class="container body-content myBody ">
         @RenderBody()
-
+        <br />
+        <br />
+        <br /><br />
 
         <nav class="navbar navbar-expand-md navbar-light bg-light fixed-bottom">
             <a class="navbar-brand" href="#">&copy; @DateTime.Now.Year - Northwest Labs</a>
