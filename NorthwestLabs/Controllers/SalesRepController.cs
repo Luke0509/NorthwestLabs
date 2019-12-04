@@ -13,7 +13,7 @@ namespace NorthwestLabs.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            return View(db.Customers);
         }
 
         public ActionResult CreateCustomer()
@@ -26,6 +26,21 @@ namespace NorthwestLabs.Controllers
         public ActionResult EditCustomer()
         {
             ViewBag.Message = "Edit Customer";
+            
+            /*
+            var newCustomer = new Customer();
+            newCustomer = db.Customers.Find(id);
+
+            if (newCustomer != null)
+            {
+                db.Database.ExecuteSqlCommand(
+                    "Update Customer_Information " +
+                    "Set Customer_Information.Cust_ID = "  +
+                    "Where Customer_Information.Cust_ID = " + id);
+
+                return RedirectToAction("Index", "Home");
+            }
+            */
 
             return View();
         }
