@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NorthwestLabs.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,12 +7,15 @@ using System.Web.Mvc;
 
 namespace NorthwestLabs.Controllers
 {
+
     public class SingaporeEmployeeController : Controller
     {
+        private LabContext db = new LabContext();
+
         public ActionResult Index()
         {
             ViewBag.Message = "List the test schedules.";
-            return View();
+            return View(db.WorkOrders);
         }
 
         public ActionResult CreateCompound()

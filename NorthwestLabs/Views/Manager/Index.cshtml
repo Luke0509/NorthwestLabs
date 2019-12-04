@@ -1,0 +1,97 @@
+﻿@model IEnumerable<NorthwestLabs.Models.WorkOrders>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Current Schedule</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cust_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Invoice_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Created)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Completed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WO_Discount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpediteOrder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Test2_IfActive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Test2_IfInactive)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Results_File_Ascii)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Analysis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Analysis_Completed)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cust_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Invoice_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_Created)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_Completed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WO_Discount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpediteOrder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Test2_IfActive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Test2_IfInactive)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Results_File_Ascii)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Analysis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Analysis_Completed)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Order_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Order_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Order_ID })
+        </td>
+    </tr>
+}
+
+</table>
