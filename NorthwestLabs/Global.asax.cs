@@ -5,12 +5,12 @@ using System.Web;
 using System.Web.Mvc;
 // using System.Web.Optimization;
 using System.Web.Routing;
-// using NorthwestLabs.Models;
+using NorthwestLabs.Models;
 using NorthwestLabs.DAL;
 using System.Data.Entity;
 using NorthwestLabs;
 
-namespace PlayBall
+namespace NorthwestLabs
 {
     public class MvcApplication : System.Web.HttpApplication
     {
