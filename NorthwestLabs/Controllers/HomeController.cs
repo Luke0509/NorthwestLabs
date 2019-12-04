@@ -12,6 +12,10 @@ namespace NorthwestLabs.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+        private Customer currentCust = new Customer();
+        private Employee currentEmployee = new Employee();
+
+
         private LabContext db = new LabContext();
         public ActionResult Index()
         {
@@ -35,40 +39,39 @@ namespace NorthwestLabs.Controllers
 
             String email = form["Email address"].ToString();
             String password = form["Password"].ToString();
-            Customer newCust = new Customer();
-            Employee newEmp = new Employee();
-            newEmp = db.Employees.FirstOrDefault(x => x.Employee_Email == email);
-            newCust = db.Customers.FirstOrDefault(x => x.Cust_Email == email);
-            
-            if (newEmp != null)
+            //Customer currentCust = new Customer();
+            //Employee currentEmp = new Employee();
+            currentCust = db.Customers.FirstOrDefault(x => x.Cust_Email == email);
+            currentEmployee = db.Employees.FirstOrDefault(x => x.Employee_Email == email);
+            if (currentEmployee != null)
             {
                 //it's an employee email
-                if (newEmp.Employee_Password == password)
+                if (currentEmployee.Employee_Password == password)
                 {
                     FormsAuthentication.SetAuthCookie(email, rememberMe);
                     //authenticate
 
-                    if (newEmp.Employee_Role_ID == 1)
+                    if (currentEmployee.Employee_Role_ID == 1)
                     {
                         return RedirectToAction("Index", "SalesRep");
                     }
-                    else if (newEmp.Employee_Role_ID == 2)
+                    else if (currentEmployee.Employee_Role_ID == 2)
                     {
                         return RedirectToAction("Index", "BR");
                     }
-                    else if (newEmp.Employee_Role_ID == 3)
+                    else if (currentEmployee.Employee_Role_ID == 3)
                     {
                         return RedirectToAction("Index", "SingaporeEmployee");
                     }
-                    else if (newEmp.Employee_Role_ID == 4)
+                    else if (currentEmployee.Employee_Role_ID == 4)
                     {
                         return RedirectToAction("Index", "TechDirector");
                     }
-                    else if (newEmp.Employee_Role_ID == 5)
+                    else if (currentEmployee.Employee_Role_ID == 5)
                     {
                         return RedirectToAction("Index", "SeattleEmployee");
                     }
-                    else if (newEmp.Employee_Role_ID == 7)
+                    else if (currentEmployee.Employee_Role_ID == 7)
                     {
                         return RedirectToAction("Index", "Manager");
                     }
@@ -80,10 +83,10 @@ namespace NorthwestLabs.Controllers
                 }
 
             }
-            else if (newCust != null)
+            else if (currentCust != null)
             {
                 //it's a customer email
-                if (newCust.Cust_Password == password)
+                if (currentCust.Cust_Password == password)
                 {
                     FormsAuthentication.SetAuthCookie(email, rememberMe);
                     return RedirectToAction("Index", "Customer");
@@ -97,10 +100,17 @@ namespace NorthwestLabs.Controllers
             else
             {
                 ViewBag.PasswordMessage = "There is no account associated with that Email address. Please try another Email.";
-            }
 
+                return View();
+            }
             return View();
         }
-
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon(); // it will clear the session at the end of request
+            return RedirectToAction("Login", "Home");
+        }
     }
+
 }
