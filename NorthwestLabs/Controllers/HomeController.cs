@@ -38,7 +38,7 @@ namespace NorthwestLabs.Controllers
                 {
                     FormsAuthentication.SetAuthCookie(email, rememberMe);
                     //authenticate
-                    //if statements here to determine view depending on role
+                    //if statements here to determine view depending on 
                 }
                 else
                 {

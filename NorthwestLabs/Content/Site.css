@@ -46,9 +46,22 @@ body, html{
 }
 
 
-.no-padding {
+/*.no-padding {
     padding-left: 0;
     padding-right: 0;
     height: 200px;
     width: 100%
 }
+
+
+
+.full-width-image {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+}
+
+    .full-width-image img {
+        width: 100%;
+    } */
