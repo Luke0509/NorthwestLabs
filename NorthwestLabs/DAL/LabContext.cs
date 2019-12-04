@@ -17,10 +17,8 @@ namespace NorthwestLabs.DAL
 
         //list different models here
 
-        //public DbSet<model> model {get; set; } 
-
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Employee> Employees { get; set; }
-
+        public DbSet<WorkOrders> WorkOrders { get; set; }
     }
 }
