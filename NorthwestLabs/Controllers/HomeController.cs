@@ -12,6 +12,10 @@ namespace NorthwestLabs.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+        private Customer currentCust = new Customer();
+        private Employee currentEmployee = new Employee();
+
+
         private LabContext db = new LabContext();
         public ActionResult Index()
         {
@@ -32,13 +36,12 @@ namespace NorthwestLabs.Controllers
             String password = form["Password"].ToString();
             Customer newCust = new Customer();
             Employee newEmp = new Employee();
-            newEmp = db.Employees.FirstOrDefault(x => x.Employee_Email == email);
             newCust = db.Customers.FirstOrDefault(x => x.Cust_Email == email);
-            
+            newEmp = db.Employees.FirstOrDefault(x => x.Employee_Email == email);
             if (newEmp != null)
             {
                 //it's an employee email
-                if (newEmp.Employee_Password == password)
+                if (currentEmployee.Employee_Password == password)
                 {
                     FormsAuthentication.SetAuthCookie(email, rememberMe);
                     //authenticate
@@ -75,10 +78,10 @@ namespace NorthwestLabs.Controllers
                 }
 
             }
-            else if (newCust != null)
+            else if (currentCust != null)
             {
                 //it's a customer email
-                if (newCust.Cust_Password == password)
+                if (currentCust.Cust_Password == password)
                 {
                     FormsAuthentication.SetAuthCookie(email, rememberMe);
                     return RedirectToAction("Index", "Customer");
@@ -92,10 +95,17 @@ namespace NorthwestLabs.Controllers
             else
             {
                 ViewBag.PasswordMessage = "There is no account associated with that Email address. Please try another Email.";
-            }
 
+                return View();
+            }
             return View();
         }
-
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon(); // it will clear the session at the end of request
+            return RedirectToAction("Login", "Home");
+        }
     }
+
 }
