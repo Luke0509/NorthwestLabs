@@ -41,7 +41,7 @@ namespace NorthwestLabs.Controllers
             if (currentEmployee != null)
             {
                 //it's an employee email
-                if (currentEmployeeloyee.Employee_Password == password)
+                if (currentEmployee.Employee_Password == password)
                 {
                     FormsAuthentication.SetAuthCookie(email, rememberMe);
                     //authenticate
