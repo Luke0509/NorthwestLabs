@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace NorthwestLabs.Controllers
 {
+    [Authorize]
     public class SeattleEmployeeController : Controller
     {
         // GET: SeattleEmployee

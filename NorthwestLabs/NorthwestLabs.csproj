@@ -115,7 +115,9 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -133,8 +135,12 @@
     </Compile>
     <Compile Include="Models\Assay.cs" />
     <Compile Include="Models\Compounds.cs" />
+    <Compile Include="Models\Compound_Samples.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Invoice.cs" />
+    <Compile Include="Models\Office_Locations.cs" />
+    <Compile Include="Models\Payment_Information.cs" />
     <Compile Include="Models\Tests.cs" />
     <Compile Include="Models\WorkOrders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -156,6 +162,13 @@
     <Content Include="Views\SingaporeEmployee\Index.cshtml" />
     <Content Include="Views\TechDirector\Index.cshtml" />
     <Content Include="Views\Home\CreateCustomer.cshtml" />
+    <Content Include="Views\SalesRep\ViewCosts.cshtml" />
+    <Content Include="Views\BR\Index.cshtml" />
+    <Content Include="Views\BR\WorkOrders.cshtml" />
+    <Content Include="Views\BR\CreateWO.cshtml" />
+    <Content Include="Views\BR\EditWO.cshtml" />
+    <Content Include="Views\Shared\_CustLayout.cshtml" />
+    <Content Include="Views\Shared\_EmpLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

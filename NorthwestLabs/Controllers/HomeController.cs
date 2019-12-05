@@ -50,28 +50,27 @@ namespace NorthwestLabs.Controllers
 
                     if (currentEmployee.Employee_Role_ID == 1)
                     {
-                        
-                        return RedirectToAction("Index", "SalesRep");
+                        return RedirectToAction("Index", "SalesRep", currentEmployee.Employee_ID);
                     }
                     else if (currentEmployee.Employee_Role_ID == 2)
                     {
-                        return RedirectToAction("Index", "BR");
+                        return RedirectToAction("Index", "BR", currentEmployee.Employee_ID);
                     }
                     else if (currentEmployee.Employee_Role_ID == 3)
                     {
-                        return RedirectToAction("Index", "SingaporeEmployee");
+                        return RedirectToAction("Index", "SingaporeEmployee", currentEmployee.Employee_ID);
                     }
                     else if (currentEmployee.Employee_Role_ID == 4)
                     {
-                        return RedirectToAction("Index", "TechDirector");
+                        return RedirectToAction("Index", "TechDirector", currentEmployee.Employee_ID);
                     }
                     else if (currentEmployee.Employee_Role_ID == 5)
                     {
-                        return RedirectToAction("Index", "SeattleEmployee");
+                        return RedirectToAction("Index", "SeattleEmployee", currentEmployee.Employee_ID);
                     }
                     else if (currentEmployee.Employee_Role_ID == 7)
                     {
-                        return RedirectToAction("Index", "Manager");
+                        return RedirectToAction("Index", "Manager", currentEmployee.Employee_ID);
                     }
 
                 }
@@ -87,7 +86,7 @@ namespace NorthwestLabs.Controllers
                 if (currentCust.Cust_Password == password)
                 {
                     FormsAuthentication.SetAuthCookie(email, rememberMe);
-                    return RedirectToAction("Index", "Customer");
+                    return RedirectToAction("Index", "Customer", currentCust.Cust_ID);
                     //authenticate
                 }
                 else
@@ -112,25 +111,7 @@ namespace NorthwestLabs.Controllers
                 //user is an employee
                 return RedirectToAction("EmployeeProfile", "Home");//, currentEmployee);
             }
-            
-                /*
-                ViewBag.Type = "Employee";
-                ViewBag.Name = currentEmployee.Employee_First_Name + " " + currentEmployee.Employee_Last_Name;
-                if (currentEmployee.Employee_State != null)
-                {
-                    ViewBag.Address = currentEmployee.Employee_Address + " " +
-                                    currentEmployee.Employee_City + ", " + currentEmployee.Employee_State;
-                }
-                else
-                {
-                    ViewBag.Address = currentEmployee.Employee_Address + " " +
-                                    currentEmployee.Employee_City;
-                }
-                ViewBag.Country = currentEmployee.Employee_Country;
-                ViewBag.Zip = currentEmployee.Employee_Zip;
-                ViewBag.Email = currentEmployee.Employee_Email;
-                */
-           
+
 
             else if (currentCust != null)
             {

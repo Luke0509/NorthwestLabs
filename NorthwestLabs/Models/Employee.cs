@@ -12,9 +12,9 @@ namespace NorthwestLabs.Models
         [Key]
         [Display(Name = "Employee ID")]
         public int Employee_ID { get; set; }
-        [Display(Name = "Employee Fist Name")]
+        [Display(Name = "Employee First Name")]
         public string Employee_First_Name { get; set; }
-        [Display(Name = "Employee_Last_Name")]
+        [Display(Name = "Employee Last Name")]
         public string Employee_Last_Name { get; set; }
         [Display(Name = "Employee Email")]
         public string Employee_Email { get; set; }
@@ -32,7 +32,7 @@ namespace NorthwestLabs.Models
         public string Employee_State { get; set; }
         [Display(Name = "Employee Country")]
         public string Employee_Country { get; set; }
-        [Display(Name = "Employee Zip")]
+        [Display(Name = "Employee Zip Code")]
         public string Employee_Zip { get; set; }
     }
 }

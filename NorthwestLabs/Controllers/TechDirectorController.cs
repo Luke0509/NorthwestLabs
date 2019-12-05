@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace NorthwestLabs.Controllers
 {
-
+    [Authorize]
     public class TechDirectorController : Controller
     {
         private LabContext db = new LabContext();
