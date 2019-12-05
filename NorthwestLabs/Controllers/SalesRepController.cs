@@ -1,4 +1,8 @@
 ﻿using NorthwestLabs.DAL;
+using NorthwestLabs.Models;
+using System.Data.Entity;
+using System.Net;
+using System.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,55 +21,54 @@ namespace NorthwestLabs.Controllers
             return View(db.Customers);
         }
 
-        public ActionResult CreateCustomer()
+        [HttpGet]
+        public ActionResult CreateCustomer(int id)
         {
-            ViewBag.Message = "Create new customer";
+            ViewBag.Message = "Create Customer";
+            Customer customer = db.Customers.Find(id);
+            return View(customer);
+        }
 
-            return View();
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateCustomer([Bind(Include = "Cust_ID, Cust_First_Name, Cust_Last_Name, Cust_Address, Cust_City, Cust_State, Cust_Country, Cust_Zip, Cust_Email, Cust_Password, Cust_Phone, Account_Created_Date, Cust_Discount")] Customer customer)
+        {
+            if (ModelState.IsValid)
+            {
+                //add entry
+                db.Customers.Add(customer); 
+                //edit entries
+                //db.Entry(customer).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(customer);
         }
 
         [HttpGet]
         public ActionResult EditCustomer(int id)
         {
             ViewBag.Message = "Edit Customer";
-            currentCustID = id;
-            return View(db.Customers.Find(id));
+            Customer customer = db.Customers.Find(id);
+            return View(customer);
         }
 
         [HttpPost]
-        public ActionResult EditCustomer(FormCollection form)
+        [ValidateAntiForgeryToken]
+        public ActionResult EditCustomer([Bind(Include = "Cust_ID, Cust_First_Name, Cust_Last_Name, Cust_Address, Cust_City, Cust_State, Cust_Country, Cust_Zip, Cust_Email, Cust_Password, Cust_Phone, Account_Created_Date, Cust_Discount")] Customer customer)
         {
-            
-            string custFirstName = form["First Name"].ToString();
-            string custLastName = form["Last Name"].ToString();
-            string streetAddress = form["Street Address"].ToString();
-            string city = form["City"].ToString();
-            string state = form["State"].ToString();
-            string country = form["Country"].ToString();
-            string zip = form["Zip"].ToString();
-            string email = form["Email Address"].ToString();
-            string password = form["Password"].ToString();
-            string phoneNumber = form["Phone Number"].ToString();
-            string dateCreated = form["Date of Account Creation"].ToString();
-            double discount = Convert.ToDouble(form["Discount"]);
-
-            db.Database.ExecuteSqlCommand(
-            "UPDATE Customer_Information " +
-            "Set Cust_First_Name = " + custFirstName + ", " +
-                "Cust_Last_Name = " + custLastName + ", " +
-                "Cust_Address = " + streetAddress + ", " +
-                "Cust_City = " + city + ", " +
-                "Cust_State = " + state + ", " +
-                "Cust_Country = " + country + ", " +
-                "Cust_Zip = " + zip + ", " +
-                "Cust_Email = " + email + ", " +
-                "Cust_Password = " + password + ", " +
-                "Cust_Phone = " + phoneNumber + ", " +
-                "Account_Created_Date = " + dateCreated + ", " +
-                "Cust_Discount = " + discount +
-            "Where Cust_ID = " + currentCustID);
-           
-            return View();
+            if(ModelState.IsValid)
+            {
+                //add entry
+                // db.Customers.Add(customer); 
+                //edit entries
+                db.Entry(customer).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+                                                  
+            return View(customer);
         }
 
         public ActionResult RequestQuote()
