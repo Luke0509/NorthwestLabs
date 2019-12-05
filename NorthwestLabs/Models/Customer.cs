@@ -23,9 +23,9 @@ namespace NorthwestLabs.Models
         public string Cust_City { get; set; }
         [DisplayName("State")]
         public string Cust_State { get; set; }
-        [DisplayName("State")]
+        [DisplayName("Country")]
         public string Cust_Country { get; set; }
-        [DisplayName("State")]
+        [DisplayName("Zip")]
         public string Cust_Zip { get; set; }
         [DisplayName("Email Address")]
         [EmailAddress(ErrorMessage ="Please enter a valid Email address")]
