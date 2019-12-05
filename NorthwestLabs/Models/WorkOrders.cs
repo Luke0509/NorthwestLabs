@@ -35,9 +35,11 @@ namespace NorthwestLabs.Models
         public bool Expedite_Order { get; set; }
 
         [Range(0, 1)]
+        [DisplayName("Run Secondary Tests on Active?")]
         public bool Test2_IfActive { get; set; }
 
         [Range(0, 1)]
+        [DisplayName("Run Secondary Tests on Inactive?")]
         public bool Test2_IfInactive { get; set; }
 
         [DisplayName("Comments/Analysis")]

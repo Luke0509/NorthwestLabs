@@ -5,19 +5,13 @@
     Layout = "~/Views/Shared/_CustLayout.cshtml";
 }
 
-<h2>Current Work Orders</h2>
+<h2>MyOrders</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Cust_ID)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Invoice_ID)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.Date_Created)
         </th>
@@ -51,12 +45,6 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Cust_ID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Invoice_ID)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.Date_Created)
         </td>
         <td>
@@ -84,9 +72,7 @@
             @Html.DisplayFor(modelItem => item.Analysis_Completed)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Order_ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Order_ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Order_ID })
+            @Html.ActionLink("View Progress", "OrderProgress", new { id=item.Order_ID })
         </td>
     </tr>
 }

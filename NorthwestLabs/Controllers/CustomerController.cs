@@ -24,7 +24,7 @@ namespace NorthwestLabs.Controllers
        
 
         public ActionResult MyOrders()
-        {
+        {   
             List<WorkOrders> lstWO = new List<WorkOrders>();
             ViewBag.Message = "Current Work Orders";
             foreach (WorkOrders workOrder in db.WorkOrders)
