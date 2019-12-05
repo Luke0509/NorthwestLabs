@@ -13,7 +13,7 @@ namespace NorthwestLabs.Controllers
     public class CustomerController : Controller
     {
         private LabContext db = new LabContext();
-        [Authorize]
+
         public ActionResult Index()
         {
             return View();

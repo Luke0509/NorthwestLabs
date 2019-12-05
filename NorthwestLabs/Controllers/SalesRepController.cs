@@ -11,6 +11,7 @@ using System.Web.Mvc;
 
 namespace NorthwestLabs.Controllers
 {
+    [Authorize]
     public class SalesRepController : Controller
     {
         private LabContext db = new LabContext();

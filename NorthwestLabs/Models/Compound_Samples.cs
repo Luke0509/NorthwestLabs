@@ -18,8 +18,8 @@ namespace NorthwestLabs.Models
         public int Assay_ID { get; set; }
         [DisplayName("Order ID")]
         public int Order_ID { get; set; }
-        [DisplayName("Date Arrived")]
-        public DateTime Date_Arrived { get; set; }
+        [DisplayName("Date Submitted")]
+        public DateTime Date_Submitted { get; set; }
         [DisplayName("Date Processed")]
         public DateTime? Date_Processed { get; set; }
         [DisplayName("Due Date")]
