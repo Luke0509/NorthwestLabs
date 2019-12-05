@@ -128,7 +128,7 @@ namespace NorthwestLabs.Controllers
             ViewBag.Message = "Create Customer";
             return View();
         }
-            
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult CreateCustomer([Bind(Include = "Cust_ID, Cust_First_Name, Cust_Last_Name, Cust_Address, Cust_City, Cust_State, Cust_Country, Cust_Zip, Cust_Email, Cust_Password, Cust_Phone, Account_Created_Date, Cust_Discount")] Customer customer)

@@ -25,7 +25,7 @@ namespace NorthwestLabs.Models
         public DateTime? Date_Completed { get; set; }
 
         [DisplayName("Order Status")]
-        public DateTime? Order_Status { get; set; }
+        public string Order_Status { get; set; }
 
         [DisplayName("Work Order Discount")]
         public double WO_Discount { get; set; }
