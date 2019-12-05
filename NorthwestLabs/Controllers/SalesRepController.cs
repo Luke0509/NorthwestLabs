@@ -13,7 +13,6 @@ namespace NorthwestLabs.Controllers
 {
     public class SalesRepController : Controller
     {
-        private int currentCustID = 0;
         private LabContext db = new LabContext();
 
         public ActionResult Index()
@@ -76,6 +75,12 @@ namespace NorthwestLabs.Controllers
             ViewBag.Message = "Request quote from Singapore";
 
             return View();
+        }
+
+        public ActionResult ViewCosts()
+        {
+            ViewBag.Message = "Costs of Current Tests";
+            return View(db.Invoices); 
         }
     }
 }

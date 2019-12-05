@@ -16,9 +16,9 @@ namespace NorthwestLabs.Models
 
         public int Cust_ID { get; set; }
 
-        public int Invoice_ID { get; set; }
-
         public int Employee_ID { get; set; }
+
+        public int Invoice_ID { get; set; }
 
         [DisplayName("Start Date")]
         public DateTime Date_Created { get; set; }
@@ -31,22 +31,22 @@ namespace NorthwestLabs.Models
 
         [Range(0, 1)]
         [DisplayName("Order Expedited")]
-        public int Expedite_Order { get; set; }
+        public bool Expedite_Order { get; set; }
 
         [Range(0, 1)]
-        public int Test2_IfActive { get; set; }
+        public bool Test2_IfActive { get; set; }
 
         [Range(0, 1)]
-        public int Test2_IfInactive { get; set; }
+        public bool Test2_IfInactive { get; set; }
 
         [DisplayName("Results File")]
         public string Results_File_Ascii { get; set; }
 
-        [DisplayName("Analysis")]
+        [DisplayName("Comments/Analysis")]
         public string Analysis { get; set; }
 
         [Range(0,1)]
         [DisplayName("Analysis Completed")]
-        public int Analysis_Completed { get; set; }
+        public bool Analysis_Completed { get; set; }
     }
 }
