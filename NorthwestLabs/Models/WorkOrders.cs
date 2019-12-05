@@ -16,8 +16,6 @@ namespace NorthwestLabs.Models
 
         public int Cust_ID { get; set; }
 
-        public int Employee_ID { get; set; }
-
         public int Invoice_ID { get; set; }
 
         [DisplayName("Start Date")]
@@ -25,6 +23,9 @@ namespace NorthwestLabs.Models
 
         [DisplayName("Finish Date")]
         public DateTime? Date_Completed { get; set; }
+
+        [DisplayName("Order Status")]
+        public DateTime? Order_Status { get; set; }
 
         [DisplayName("Work Order Discount")]
         public double WO_Discount { get; set; }
@@ -38,9 +39,6 @@ namespace NorthwestLabs.Models
 
         [Range(0, 1)]
         public bool Test2_IfInactive { get; set; }
-
-        [DisplayName("Results File")]
-        public string Results_File_Ascii { get; set; }
 
         [DisplayName("Comments/Analysis")]
         public string Analysis { get; set; }

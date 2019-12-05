@@ -38,7 +38,7 @@ namespace NorthwestLabs.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditWO([Bind(Include = "Order_ID, Cust_ID, Employee_ID, Invoice_ID, Date_Created, Date_Completed, WO_Discount, Expedite_Order, Test2_IfActive,  Test2_IfInactive, Results_File_Ascii, Analysis, Analysis_Completed")] WorkOrders wo)
+        public ActionResult EditWO([Bind(Include = "Order_ID, Cust_ID, Invoice_ID, Date_Created, Date_Completed, Order_Status, WO_Discount, Expedite_Order, Test2_IfActive, Test2_IfInactive, Analysis, Analysis_Completed")] WorkOrders wo)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +65,7 @@ namespace NorthwestLabs.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult CreateWO([Bind(Include = "Order_ID, Cust_ID, Employee_ID, Date_Created, Date_Completed, WO_Discount, Expedite_Order, Test2_IfActive, Test2_IfInactive, Results_File_Ascii, Analysis, Analysis_Completed, Invoice_ID")] WorkOrders wo)
+        public ActionResult CreateWO([Bind(Include = "Order_ID, Cust_ID, Invoice_ID, Date_Created, Date_Completed, Order_Status, WO_Discount, Expedite_Order, Test2_IfActive, Test2_IfInactive, Analysis, Analysis_Completed")] WorkOrders wo)
         {
             if (ModelState.IsValid)
             {
