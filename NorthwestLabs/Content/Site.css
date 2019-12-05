@@ -114,27 +114,26 @@ html, body, h1, h2, h3 {
     transform: translate(-50%, -50%);
     text-align: center;
 }
-table, td, th {
+
+
+.catalog {
+    border-collapse: collapse;
+    width: 100%;
     border: 4px solid #ddd;
     text-align: left;
 }
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-th, td {
-    padding: 15px;
-    
-}
-th {
+.catalogTH {
+    border: 4px solid #ddd;
+    text-align: left;
     font-size: 22px;
+    padding: 15px;
 }
-td{
+.catalogTD {
+    border: 4px solid #ddd;
+    text-align: left;
+    padding: 15px;
     font-size: 20px;
 }
-
 
 
 .dropdown {
@@ -163,3 +162,10 @@ td{
     right:0;
     text-align: center;
 }
+
+.loginForm{
+    font-size: 22px;
+    position:center;
+    text-align:center;
+}
+  

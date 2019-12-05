@@ -2,18 +2,19 @@
     ViewBag.Title = "Login";
 }
 
-<h2>Login</h2>
+<h2 class="headers">Login</h2>
+<div class="loginForm">
+    @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+    {
+        <label for="inputEmail">Email</label><br />
+        @Html.TextBox("Email address")<br /><br />
+        <label for="inputPassword">Password</label><br />
+        @Html.Password("Password")<br /><br />
+        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" style="font-size: 20px">Login</button>
 
-@using (Html.BeginForm("Login", "Home", FormMethod.Post))
-{
-    <label for="inputEmail">Email address</label>
-    @Html.TextBox("Email address")
-    <label for="inputPassword">Password</label>
-    @Html.Password("Password")
-    <button type="submit">Login</button>
-
-    @ViewBag.PasswordMessage;
+        @ViewBag.PasswordMessage;
 
 
-    <p>&nbsp;<img style="display: block; margin-left: auto; margin-right: auto;" src="https://qrcode.replenishbot.com/?value=https://zfrmz.com/eP8F10WMKai6yNznMuDv?refferer_name=room111" alt="" width="301" height="301" /></p>
-}
+        <p>&nbsp;<img style="display: block; margin-left: auto; margin-right: auto;" src="https://qrcode.replenishbot.com/?value=https://zfrmz.com/eP8F10WMKai6yNznMuDv?refferer_name=room111" alt="" width="301" height="301" /></p>
+    }
+</div>
