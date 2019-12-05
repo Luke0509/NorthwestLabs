@@ -135,9 +135,12 @@
     </Compile>
     <Compile Include="Models\Assay.cs" />
     <Compile Include="Models\Compounds.cs" />
+    <Compile Include="Models\Compound_Samples.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Invoice.cs" />
+    <Compile Include="Models\Office_Locations.cs" />
+    <Compile Include="Models\Payment_Information.cs" />
     <Compile Include="Models\Tests.cs" />
     <Compile Include="Models\WorkOrders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

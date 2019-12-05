@@ -15,10 +15,10 @@ namespace NorthwestLabs.Models
         [DisplayName("Invoice ID")]
         public int Invoice_ID { get; set; }
         [DisplayName("Net Price")]
-        public int Net_Price { get; set; }
+        public double Net_Price { get; set; }
         [DisplayName("Total Discounts Applied")]
         public double Total_Discount { get; set; }
         [DisplayName("Final Price")]
-        public int Final_Price { get; set; }
+        public double Final_Price { get; set; }
     }
 }
