@@ -169,7 +169,6 @@
     <Content Include="Views\BR\EditWO.cshtml" />
     <Content Include="Views\Shared\_CustLayout.cshtml" />
     <Content Include="Views\Shared\_EmpLayout.cshtml" />
-    <Content Include="Views\Customer\MyOrders.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
