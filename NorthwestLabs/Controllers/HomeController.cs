@@ -50,27 +50,27 @@ namespace NorthwestLabs.Controllers
 
                     if (currentEmployee.Employee_Role_ID == 1)
                     {
-                        return RedirectToAction("Index", "SalesRep");
+                        return RedirectToAction("Index", "SalesRep", currentEmployee.Employee_ID);
                     }
                     else if (currentEmployee.Employee_Role_ID == 2)
                     {
-                        return RedirectToAction("Index", "BR");
+                        return RedirectToAction("Index", "BR", currentEmployee.Employee_ID);
                     }
                     else if (currentEmployee.Employee_Role_ID == 3)
                     {
-                        return RedirectToAction("Index", "SingaporeEmployee");
+                        return RedirectToAction("Index", "SingaporeEmployee", currentEmployee.Employee_ID);
                     }
                     else if (currentEmployee.Employee_Role_ID == 4)
                     {
-                        return RedirectToAction("Index", "TechDirector");
+                        return RedirectToAction("Index", "TechDirector", currentEmployee.Employee_ID);
                     }
                     else if (currentEmployee.Employee_Role_ID == 5)
                     {
-                        return RedirectToAction("Index", "SeattleEmployee");
+                        return RedirectToAction("Index", "SeattleEmployee", currentEmployee.Employee_ID);
                     }
                     else if (currentEmployee.Employee_Role_ID == 7)
                     {
-                        return RedirectToAction("Index", "Manager");
+                        return RedirectToAction("Index", "Manager", currentEmployee.Employee_ID);
                     }
 
                 }
@@ -86,7 +86,7 @@ namespace NorthwestLabs.Controllers
                 if (currentCust.Cust_Password == password)
                 {
                     FormsAuthentication.SetAuthCookie(email, rememberMe);
-                    return RedirectToAction("Index", "Customer");
+                    return RedirectToAction("Index", "Customer", currentCust.Cust_ID);
                     //authenticate
                 }
                 else
