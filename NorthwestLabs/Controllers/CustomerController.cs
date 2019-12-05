@@ -12,12 +12,13 @@ namespace NorthwestLabs.Controllers
     [Authorize]
     public class CustomerController : Controller
     {
-        private int custID = 0;
+        private static int currentCustID;
         private LabContext db = new LabContext();
+
 
         public ActionResult Index(Customer customer)
         {
-            custID = customer.Cust_ID;
+            currentCustID = customer.Cust_ID;
             return View();
         }
        
@@ -28,7 +29,7 @@ namespace NorthwestLabs.Controllers
             ViewBag.Message = "Current Work Orders";
             foreach (WorkOrders workOrder in db.WorkOrders)
             {
-                if (workOrder.Cust_ID == custID)
+                if (workOrder.Cust_ID == currentCustID)
                 {
                     lstWO.Add(workOrder);
                 }
