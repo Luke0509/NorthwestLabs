@@ -111,25 +111,7 @@ namespace NorthwestLabs.Controllers
                 //user is an employee
                 return RedirectToAction("EmployeeProfile", "Home");//, currentEmployee);
             }
-            
-                /*
-                ViewBag.Type = "Employee";
-                ViewBag.Name = currentEmployee.Employee_First_Name + " " + currentEmployee.Employee_Last_Name;
-                if (currentEmployee.Employee_State != null)
-                {
-                    ViewBag.Address = currentEmployee.Employee_Address + " " +
-                                    currentEmployee.Employee_City + ", " + currentEmployee.Employee_State;
-                }
-                else
-                {
-                    ViewBag.Address = currentEmployee.Employee_Address + " " +
-                                    currentEmployee.Employee_City;
-                }
-                ViewBag.Country = currentEmployee.Employee_Country;
-                ViewBag.Zip = currentEmployee.Employee_Zip;
-                ViewBag.Email = currentEmployee.Employee_Email;
-                */
-           
+
 
             else if (currentCust != null)
             {

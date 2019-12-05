@@ -111,11 +111,15 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\NorthwestLabs20191204095217 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\NWLab - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -155,7 +159,6 @@
     <Content Include="Views\SalesRep\Index.cshtml" />
     <Content Include="Views\SingaporeEmployee\Index.cshtml" />
     <Content Include="Views\TechDirector\Index.cshtml" />
-    <Content Include="Views\Home\CreateCustomer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
