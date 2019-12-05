@@ -45,11 +45,10 @@ namespace NorthwestLabs.Controllers
             return View();
         }
 
-        public ActionResult PastOrders()
+        public ActionResult OrderProgress(int? id)
         {
-            ViewBag.Message = "Past Work Order";
 
-            return View();
+            return View(db.WorkOrders.Find(id));
         }
 
     }
