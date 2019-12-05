@@ -24,9 +24,6 @@
             @Html.DisplayNameFor(model => model.Cust_Email)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Cust_Password)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Cust_Phone)
         </th>
         <th>
@@ -71,7 +68,7 @@
             @Html.DisplayFor(modelItem => item.Cust_Discount)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Cust_ID }) |
+            @Html.ActionLink("Edit", "EditCustomer", new { id=item.Cust_ID }) |
             @Html.ActionLink("Details", "Details", new { id=item.Cust_ID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.Cust_ID })
         </td>
