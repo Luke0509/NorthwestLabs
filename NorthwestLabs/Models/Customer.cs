@@ -12,6 +12,7 @@ namespace NorthwestLabs.Models
     public class Customer
     {
         [Key]
+        [DisplayName("Customer ID")]
         public int Cust_ID { get; set; }
         [DisplayName("First Name")]
         public string Cust_First_Name{ get; set; }

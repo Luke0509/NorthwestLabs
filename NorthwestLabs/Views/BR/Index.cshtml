@@ -4,11 +4,9 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Current Tests</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 <table class="table">
     <tr>
         <th>
@@ -28,11 +26,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Test_Details)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Test_ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Test_ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Test_ID })
-        </td>
+       
     </tr>
 }
 

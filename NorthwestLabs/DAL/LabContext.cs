@@ -21,5 +21,6 @@ namespace NorthwestLabs.DAL
         public DbSet<Employee> Employees { get; set; }
         public DbSet<WorkOrders> WorkOrders { get; set; }
         public DbSet<Tests> Tests { get; set; }
+        public DbSet<Invoice> Invoices { get; set; }
     }
 }

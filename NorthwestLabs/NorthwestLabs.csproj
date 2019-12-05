@@ -111,15 +111,11 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
-    <None Include="Properties\PublishProfiles\NorthwestLabs20191204095217 - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\NWLab - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -139,6 +135,7 @@
     <Compile Include="Models\Compounds.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\Tests.cs" />
     <Compile Include="Models\WorkOrders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -159,6 +156,12 @@
     <Content Include="Views\SalesRep\Index.cshtml" />
     <Content Include="Views\SingaporeEmployee\Index.cshtml" />
     <Content Include="Views\TechDirector\Index.cshtml" />
+    <Content Include="Views\Home\CreateCustomer.cshtml" />
+    <Content Include="Views\SalesRep\ViewCosts.cshtml" />
+    <Content Include="Views\BR\Index.cshtml" />
+    <Content Include="Views\BR\WorkOrders.cshtml" />
+    <Content Include="Views\BR\CreateWO.cshtml" />
+    <Content Include="Views\BR\EditWO.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
