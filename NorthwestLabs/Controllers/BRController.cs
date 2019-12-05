@@ -14,6 +14,9 @@ namespace NorthwestLabs.Controllers
     {
         private LabContext db = new LabContext();
 
+        public static List<OrderStatus> lstStatus = new List<OrderStatus>();
+        
+
         public ActionResult Index()
         {
             return View(db.Tests);
@@ -29,6 +32,27 @@ namespace NorthwestLabs.Controllers
         [HttpGet]
         public ActionResult EditWO(int id)
         {
+            //add list of order statuses 
+            lstStatus.Clear();
+            OrderStatus received = new OrderStatus();
+            received.Status_ID = 1;
+            received.Status_Description = "Received";
+            lstStatus.Add(received);
+            OrderStatus testing = new OrderStatus();
+            testing.Status_ID = 2;
+            testing.Status_Description = "Testing";
+            lstStatus.Add(testing);
+            OrderStatus finalizingReport = new OrderStatus();
+            finalizingReport.Status_ID = 3;
+            finalizingReport.Status_Description = "Finalizing Reports";
+            lstStatus.Add(finalizingReport);
+            OrderStatus finished = new OrderStatus();
+            finished.Status_ID = 4;
+            finished.Status_Description = "Finished";
+            lstStatus.Add(finished);
+            //add list to viewbag
+            ViewBag.orderStatus = lstStatus; 
+
             ViewBag.customers = db.Customers.ToList();
             ViewBag.employees = db.Employees.ToList();
             ViewBag.Message = "Edit Work Order";
@@ -57,6 +81,27 @@ namespace NorthwestLabs.Controllers
         [HttpGet]
         public ActionResult CreateWO()
         {
+            //add list of order statuses 
+            lstStatus.Clear();
+            OrderStatus received = new OrderStatus();
+            received.Status_ID = 1;
+            received.Status_Description = "Received";
+            lstStatus.Add(received);
+            OrderStatus testing = new OrderStatus();
+            testing.Status_ID = 2;
+            testing.Status_Description = "Testing";
+            lstStatus.Add(testing);
+            OrderStatus finalizingReport = new OrderStatus();
+            finalizingReport.Status_ID = 3;
+            finalizingReport.Status_Description = "Finalizing Reports";
+            lstStatus.Add(finalizingReport);
+            OrderStatus finished = new OrderStatus();
+            finished.Status_ID = 4;
+            finished.Status_Description = "Finished";
+            lstStatus.Add(finished);
+            //add list to viewbag
+            ViewBag.orderStatus = lstStatus;
+
             ViewBag.customers = db.Customers.ToList();
             ViewBag.employees = db.Employees.ToList();
             ViewBag.Message = "Edit Work Order";
