@@ -50,6 +50,7 @@ namespace NorthwestLabs.Controllers
 
                     if (currentEmployee.Employee_Role_ID == 1)
                     {
+                        
                         return RedirectToAction("Index", "SalesRep");
                     }
                     else if (currentEmployee.Employee_Role_ID == 2)
