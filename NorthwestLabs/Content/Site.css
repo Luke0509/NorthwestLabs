@@ -119,22 +119,24 @@ table, td, th {
     text-align: left;
 }
 
-table {
+.catalog {
     border-collapse: collapse;
     width: 100%;
+    border: 4px solid #ddd;
+    text-align: left;
 }
-
-th, td {
-    padding: 15px;
-    
-}
-th {
+.catalogTH {
+    border: 4px solid #ddd;
+    text-align: left;
     font-size: 22px;
+    padding: 15px;
 }
-td{
+.catalogTD {
+    border: 4px solid #ddd;
+    text-align: left;
+    padding: 15px;
     font-size: 20px;
 }
-
 
 
 .dropdown {
