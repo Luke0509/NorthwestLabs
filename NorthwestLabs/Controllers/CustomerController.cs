@@ -12,19 +12,30 @@ namespace NorthwestLabs.Controllers
     [Authorize]
     public class CustomerController : Controller
     {
+        private static int currentCustID;
         private LabContext db = new LabContext();
 
-        public ActionResult Index()
+
+        public ActionResult Index(Customer customer)
         {
+            currentCustID = customer.Cust_ID;
             return View();
         }
        
 
-        public ActionResult MyOrders(int? id)
+        public ActionResult MyOrders()
         {
+            List<WorkOrders> lstWO = new List<WorkOrders>();
             ViewBag.Message = "Current Work Orders";
-
-            return View();
+            foreach (WorkOrders workOrder in db.WorkOrders)
+            {
+                if (workOrder.Cust_ID == currentCustID)
+                {
+                    lstWO.Add(workOrder);
+                }
+                    
+            }
+            return View(lstWO);
         }
 
         public ActionResult NewOrder()

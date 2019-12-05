@@ -86,7 +86,7 @@ namespace NorthwestLabs.Controllers
                 if (currentCust.Cust_Password == password)
                 {
                     FormsAuthentication.SetAuthCookie(email, rememberMe);
-                    return RedirectToAction("Index", "Customer", currentCust.Cust_ID);
+                    return RedirectToAction("Index", "Customer", currentCust);
                     //authenticate
                 }
                 else
