@@ -139,6 +139,35 @@ namespace NorthwestLabs.Controllers
             return View();
         }
 
+
+        [HttpGet]
+        public ActionResult CreateCustomer()
+        {
+            ViewBag.Message = "Create Customer";
+            return View();
+        }
+            
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateCustomer([Bind(Include = "Cust_ID, Cust_First_Name, Cust_Last_Name, Cust_Address, Cust_City, Cust_State, Cust_Country, Cust_Zip, Cust_Email, Cust_Password, Cust_Phone, Account_Created_Date, Cust_Discount")] Customer customer)
+        {
+            if (ModelState.IsValid)
+            {
+                //add entry
+                db.Customers.Add(customer);
+                //edit entries
+                //db.Entry(customer).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(customer);
+        }
+
+
+
+
+
         public ActionResult EmployeeProfile()
         {
             return View(currentEmployee);
@@ -147,6 +176,8 @@ namespace NorthwestLabs.Controllers
         {
             return View(currentCust);
         }
+
+
 
         public ActionResult Logout()
         {

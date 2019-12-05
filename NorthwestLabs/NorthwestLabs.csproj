@@ -155,6 +155,7 @@
     <Content Include="Views\SalesRep\Index.cshtml" />
     <Content Include="Views\SingaporeEmployee\Index.cshtml" />
     <Content Include="Views\TechDirector\Index.cshtml" />
+    <Content Include="Views\Home\CreateCustomer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
