@@ -1,0 +1,107 @@
+﻿@model NorthwestLabs.Models.Employee
+
+@{
+    ViewBag.Title = "EmployeeProfile";
+    Layout = "~/Views/Shared/_EmpLayout.cshtml";
+}
+
+<h2>EmployeeProfile</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_First_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_First_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_Last_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_Last_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_Role_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_Role_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Office_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Office_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_State)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_State)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_Country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee_Zip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee_Zip)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Employee_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
