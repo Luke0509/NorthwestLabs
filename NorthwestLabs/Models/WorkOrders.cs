@@ -19,9 +19,6 @@ namespace NorthwestLabs.Models
         [DisplayName("Customer ID")]
         public int Cust_ID { get; set; }
 
-        [DisplayName("Invoice ID")]
-        public int Invoice_ID { get; set; }
-
         [DisplayName("Date Created")]
         public DateTime Date_Created { get; set; }
 

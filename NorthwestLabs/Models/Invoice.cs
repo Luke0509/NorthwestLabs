@@ -14,6 +14,8 @@ namespace NorthwestLabs.Models
         [Key]
         [DisplayName("Invoice ID")]
         public int Invoice_ID { get; set; }
+        [DisplayName("Order ID")]
+        public int Order_ID { get; set; }
         [DisplayName("Net Price")]
         public double Net_Price { get; set; }
         [DisplayName("Total Discounts Applied")]

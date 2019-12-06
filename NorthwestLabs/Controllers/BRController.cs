@@ -19,7 +19,7 @@ namespace NorthwestLabs.Controllers
 
         public ActionResult Index()
         {
-            return View(db.Tests);
+            return RedirectToAction("WorkOrders");
         }
 
         public ActionResult WorkOrders()
