@@ -10,6 +10,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.Order_ID)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Net_Price)
         </th>
         <th>
@@ -23,6 +26,9 @@
 
 @foreach (var item in Model) {
     <tr>
+        <th>
+            @Html.DisplayFor(modelItem => item.Order_ID)
+        </th>
         <td>
             @Html.DisplayFor(modelItem => item.Net_Price)
         </td>
@@ -32,8 +38,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Final_Price)
         </td>
-        <td>
-        </td>
+        <td></td>
     </tr>
 }
 

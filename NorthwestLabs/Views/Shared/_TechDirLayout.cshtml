@@ -43,11 +43,12 @@
             </form>
             <div class="dropdown">
                 <img src="~/Content/Pictures/personSilhouette.jpg" />
-                <div class="dropdown-content">
-                    <a style="text-decoration:none; font-size: 16px;" href="@Url.Action("Login", "Home")">Sign In</a><br /><br />
-                    <a style="text-decoration:none; font-size: 16px;" href="@Url.Action("CreateCustomer", "Home")">Create Account</a>
+                <ul class="navbar-nav navbar-right">
 
-                </div>
+                    <img src="~/Content/Pictures/personSilhouette.jpg" style="padding-left:30px; padding-right: 0px;" />
+
+                    <a class="nav-item  nav-link" href="@Url.Action("Logout", "Home" )">|  Logout</a>
+                </ul>
             </div>
 
             <!--<ul class="navbar-nav navbar-right">
