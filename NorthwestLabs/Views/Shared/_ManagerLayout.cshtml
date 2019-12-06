@@ -41,14 +41,13 @@
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="font-size: 14px">
                 <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" style="font-size: 14px">Search</button>
             </form>
-            <div class="dropdown">
-                <img src="~/Content/Pictures/personSilhouette.jpg" />
-                <div class="dropdown-content">
-                    <a style="text-decoration:none; font-size: 16px;" href="@Url.Action("Login", "Home")">Sign In</a><br /><br />
-                    <a style="text-decoration:none; font-size: 16px;" href="@Url.Action("CreateCustomer", "Home")">Create Account</a>
+            <ul class="navbar-nav navbar-right">
 
-                </div>
-            </div>
+                <img src="~/Content/Pictures/personSilhouette.jpg" style="padding-left:30px; padding-right: 0px;" />
+
+                <a class="nav-item  nav-link" href="@Url.Action("Logout", "Home" )">|  Logout</a>
+            </ul>
+        </div>
 
             <!--<ul class="navbar-nav navbar-right">
                 <a class="nav-item  nav-link" href="">Sign In</a>
