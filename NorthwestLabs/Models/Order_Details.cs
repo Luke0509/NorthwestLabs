@@ -21,9 +21,9 @@ namespace NorthwestLabs.Models
         [DisplayName("LT Number")]
         public int LT_Number { get; set; }
         [DisplayName("Item Price")]
-        public int Item_Price { get; set; }
+        public double Item_Price { get; set; }
         [DisplayName("Results Ascii")]
-        public int Results_File_Ascii { get; set; }
+        public string Results_File_Ascii { get; set; }
     }
     
 }
