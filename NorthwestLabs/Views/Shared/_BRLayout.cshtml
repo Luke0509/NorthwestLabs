@@ -29,8 +29,11 @@
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="@Url.Action("Index", "BR" )">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("ViewTests", "BR" )">Tests</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="@Url.Action("WorkOrders", "BR" )">Manage Work Orders</a>
@@ -41,8 +44,8 @@
                 <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" style="font-size: 14px">Search</button>
             </form>
             <ul class="navbar-nav navbar-right">
-                <a  href="@Url.Action("Profile", "Home" )"> <img src="~/Content/Pictures/personSilhouette.jpg" style="padding-left:30px; padding-right: 0px;"/>
-                </a>
+                <img src="~/Content/Pictures/personSilhouette.jpg" style="padding-left:30px; padding-right: 0px;"/>
+                
                 <a class="nav-item  nav-link" href="@Url.Action("Logout", "Home" )">|  Logout</a>
             </ul>
 
