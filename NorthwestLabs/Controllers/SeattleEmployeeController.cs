@@ -19,6 +19,9 @@ namespace NorthwestLabs.Controllers
             return View();
         }
         // Method to edit work order
+
+        
+
         [HttpGet]
         public ActionResult EditWO(int id)
         {
@@ -114,5 +117,7 @@ namespace NorthwestLabs.Controllers
 
             return View(wo);
         }
+
+
     }
 }
