@@ -24,14 +24,12 @@ namespace NorthwestLabs.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            ViewBag.CompoundSamples = db.Compound_Samples.ToList(); 
-            ViewBag.customers = db.Customers.ToList();
-            ViewBag.employees = db.Employees.ToList();
-            ViewBag.Message = "Create Work Order";
+            ViewBag.CompoundSamples = db.Compound_Samples.ToList();
+
             return View();
         }
 
-    [HttpPost]
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "LT_Number, Assay_ID, Order_ID, Date_Arrived, Date_Processed, Date_Due, Compound_Weight_Client, Actual_Weight, Molecular_Mass")] Compound_Samples cs)
         {
@@ -42,7 +40,7 @@ namespace NorthwestLabs.Controllers
                 //edit entries
                 //db.Entry(wo).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("CreateOrderDetail");
             }
 
             ViewBag.Message = "Error in validation";
@@ -54,9 +52,6 @@ namespace NorthwestLabs.Controllers
         public ActionResult Edit(int id)
         {
             ViewBag.CompoundSamples = db.Compound_Samples.ToList();
-            ViewBag.customers = db.Customers.ToList();
-            ViewBag.employees = db.Employees.ToList();
-            ViewBag.Message = "Edit Work Order";
             Compound_Samples cs = db.Compound_Samples.Find(id);
             return View(cs);
         }
@@ -79,15 +74,31 @@ namespace NorthwestLabs.Controllers
             return View(cs);
         }
 
-        public ActionResult EditWorkOrder()
+
+        // Method to create work order
+        [HttpGet]
+        public ActionResult CreateOrderDetail()
         {
+            ViewBag.OrderDetails = db.Order_Details.ToList();
             return View();
         }
 
-        public ActionResult ListWorkOrders()
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateOrderDetail([Bind(Include = "Order_ID, LT_Number, Item_Price, Results_File_Ascii")] Order_Details od)
         {
-            ViewBag.Message = "List the work orders.";
-            return View();
+            if (ModelState.IsValid)
+            {
+                //add entry
+                db.Order_Details.Add(od);
+                //edit entries
+                //db.Entry(wo).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(); 
+
         }
     }
 }

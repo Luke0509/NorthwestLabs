@@ -12,13 +12,17 @@ namespace NorthwestLabs.Models
     public class WorkOrders
     {
         [Key]
+        [DisplayName("Order ID")]
         public int Order_ID { get; set; }
 
+        [Required(ErrorMessage = "Please Enter a Value")]
+        [DisplayName("Customer ID")]
         public int Cust_ID { get; set; }
 
+        [DisplayName("Invoice ID")]
         public int Invoice_ID { get; set; }
 
-        [DisplayName("Start Date")]
+        [DisplayName("Date Created")]
         public DateTime Date_Created { get; set; }
 
         [DisplayName("Finish Date")]

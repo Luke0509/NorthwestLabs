@@ -23,6 +23,8 @@ namespace NorthwestLabs.DAL
         public DbSet<Tests> Tests { get; set; }
         public DbSet<Invoice> Invoices { get; set; }
         public DbSet<Compound_Samples> Compound_Samples { get; set; }
+        public DbSet<Order_Details> Order_Details { get; set; }
+
 
 
 

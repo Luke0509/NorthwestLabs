@@ -141,6 +141,7 @@
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\Office_Locations.cs" />
     <Compile Include="Models\OrderStatus.cs" />
+    <Compile Include="Models\Order_Details.cs" />
     <Compile Include="Models\Payment_Information.cs" />
     <Compile Include="Models\Tests.cs" />
     <Compile Include="Models\WorkOrders.cs" />
