@@ -26,7 +26,8 @@ namespace NorthwestLabs.Controllers
         public ActionResult MyOrders()
         {   
             List<WorkOrders> lstWO = new List<WorkOrders>();
-            ViewBag.Message = "Current Work Orders";
+            Customer currCust = db.Customers.Find(currentCustID);
+            ViewBag.Message = "Work Orders for " + currCust.Cust_First_Name + " " + currCust.Cust_Last_Name;
             foreach (WorkOrders workOrder in db.WorkOrders)
             {
                 if (workOrder.Cust_ID == currentCustID)
@@ -38,7 +39,7 @@ namespace NorthwestLabs.Controllers
             return View(lstWO);
         }
 
-        public ActionResult NewOrder()
+        public ActionResult CreateOrder()
         {
             ViewBag.Message = "New Work Order";
 

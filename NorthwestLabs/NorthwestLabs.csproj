@@ -99,6 +99,11 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Pictures\LoadBarEmpty.png" />
+    <Content Include="Content\Pictures\LoadBarFinalizing.png" />
+    <Content Include="Content\Pictures\LoadBarFinished.png" />
+    <Content Include="Content\Pictures\LoadBarReceived %281%29.png" />
+    <Content Include="Content\Pictures\LoadBarTesting.png" />
     <Content Include="Content\Pictures\Logo.jpeg" />
     <Content Include="Content\Pictures\louis-reed-pwcKF7L4-no-unsplash.jpg" />
     <Content Include="Content\Pictures\northwestlabs.png" />
@@ -169,11 +174,17 @@
     <Content Include="Views\BR\CreateWO.cshtml" />
     <Content Include="Views\BR\EditWO.cshtml" />
     <Content Include="Views\Shared\_CustLayout.cshtml" />
-    <Content Include="Views\Shared\_EmpLayout.cshtml" />
+    <Content Include="Views\Shared\_BRLayout.cshtml" />
     <Content Include="Views\Customer\MyOrders.cshtml" />
     <Content Include="Views\SingaporeEmployee\Index.cshtml" />
     <Content Include="Views\SingaporeEmployee\Create.cshtml" />
     <Content Include="Views\SingaporeEmployee\Edit.cshtml" />
+    <Content Include="Views\Customer\OrderProgress.cshtml" />
+    <Content Include="Views\Shared\_SalesLayout.cshtml" />
+    <Content Include="Views\Shared\_TechDirLayout.cshtml" />
+    <Content Include="Views\Shared\_SingaporeEmpLayout.cshtml" />
+    <Content Include="Views\Shared\_SeattleEmpLayout.cshtml" />
+    <Content Include="Views\Shared\_ManagerLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
