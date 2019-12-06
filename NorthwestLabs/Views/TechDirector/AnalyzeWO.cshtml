@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "AnalyzeResults";
+}
+<h2>Analyze Work Order</h2>
+<ul>
+    @foreach (var entry in ViewBag.entries)
+    {
+        <li>LT @entry.LT_Number : @entry.Results_File_Ascii</li>
+    }
+</ul>
