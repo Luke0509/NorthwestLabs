@@ -131,6 +131,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManagerController.cs" />
     <Compile Include="Controllers\SalesRepController.cs" />
+    <Compile Include="Controllers\SeattleEmployeeController.cs" />
     <Compile Include="Controllers\SingaporeEmployeeController.cs" />
     <Compile Include="Controllers\TechDirectorController.cs" />
     <Compile Include="DAL\LabContext.cs" />
