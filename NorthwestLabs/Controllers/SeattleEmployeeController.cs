@@ -22,9 +22,16 @@ namespace NorthwestLabs.Controllers
 
         public ActionResult ViewWorkOrders()
         {
-            return View();
+            return View(db.WorkOrders);
         }
 
+        [HttpGet]
+        public ActionResult SeePrice(int id)
+        {
+            var entry = db.Order_Details.Where(p => p.Order_ID == id).ToList();
+            ViewBag.entries = entry;
+            return View();
+        }
 
         [HttpGet]
         public ActionResult EditWO(int id)
@@ -122,6 +129,82 @@ namespace NorthwestLabs.Controllers
             return View(wo);
         }
 
+        [HttpGet]
+        public ActionResult ChooseCatalog()
+        {
+            return View();
+        }
 
+        [HttpGet]
+        public ActionResult PharmaCatalog()
+        {
+            return View(db.Assays);
+        }
+
+        [HttpGet]
+        public ActionResult ProtoNotebook()
+        {
+            return View(db.Assays);
+        }
+
+        [HttpGet]
+        public ActionResult EditAssay(int id)
+        {
+            ViewBag.compounds = db.Compounds.ToList();
+            Assay assay = db.Assays.Find(id);
+            return View(assay);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EditAssay([Bind(Include = "Assay_ID,Compound_ID,Assay_Duration,No_Of_Tests,Assay_Price,Assay_Name,Assay_Summary,Assay_Details")] Assay assay)
+        {
+            if (ModelState.IsValid)
+            {
+                //add entry
+                //db.WorkOrders.Add(wo); 
+                //edit entries
+                db.Entry(assay).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("PharmaCatalog");
+            }
+            return View(assay);
+        }
+
+        [HttpGet]
+        public ActionResult CreateAssay()
+        {
+            ViewBag.compounds = db.Compounds.ToList();
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateAssay([Bind(Include = "Assay_ID,Compound_ID,Assay_Duration,No_Of_Tests,Assay_Price,Assay_Name,Assay_Summary,Assay_Details")] Assay assay)
+        {
+            if (ModelState.IsValid)
+            {
+                //add entry
+                db.Assays.Add(assay);
+                //edit entries
+                //db.Entry(wo).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("ChooseCatalog");
+            }
+
+            return View(assay);
+        }
+
+        public ActionResult DeleteAssay(int id)
+        {
+            Assay assay = db.Assays.Find(id);
+            if (assay != null)
+            {
+                db.Assays.Remove(assay);
+                db.SaveChanges();
+                return RedirectToAction("ChooseCatalog");
+            }
+            return RedirectToAction("ChooseCatalog");
+        }
     }
 }

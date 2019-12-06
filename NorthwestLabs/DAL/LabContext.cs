@@ -24,8 +24,8 @@ namespace NorthwestLabs.DAL
         public DbSet<Invoice> Invoices { get; set; }
         public DbSet<Compound_Samples> Compound_Samples { get; set; }
         public DbSet<Order_Details> Order_Details { get; set; }
-
-
+        public DbSet<Assay> Assays { get; set; }
+        public DbSet<Compounds> Compounds { get; set; }
 
 
     }
