@@ -1,33 +1,42 @@
-﻿@model IEnumerable<NorthwestLabs.Models.Tests>
-
+﻿
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_BRLayout.cshtml";
 }
 
-<h2>Current Tests</h2>
+<link href="~/Content/Site.css" rel="stylesheet" />
 
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Test_Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Test_Details)
-        </th>
-        <th></th>
-    </tr>
+<div class="bgImage">
+    <div class="name"><strong>Northwest Labs</strong></div>
+</div><br /><br />
+<h2 class="headers">About Northwest Labs</h2><br /><br />
+<div class="aboutPage">
+    Northwest Labs Pharmaceutical provides chemical and compound tests for companies needing in-depth assay analysis.<br /><br />
+    Our company markets to many different chemical and pharmaceutical companies around the globe needing analysis work done on any number of different compounds and drugs.
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Test_Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Test_Details)
-        </td>
-       
-    </tr>
-}
+</div>
+<br /><br /><br /><br />
+<h2 class="headers">Office Locations</h2>
+<div class="row">
+    <div class="column">
+        <img src="~/Content/Pictures/Singapore.jpg" style="display:block; width:100%; height:auto;" />
+        <div class="overlay">
+            <div class="text">Singapore <br /><br /> Labs and Testing</div>
+        </div>
+    </div>
+    <div class="column">
+        <img src="~/Content/Pictures/Seattle.jpg" style="display:block; width:100%; height:auto;" />
+        <div class="overlay">
+            <div class="text">Seattle <br /><br /> Corporate Office Headquarters</div>
 
-</table>
+        </div>
+
+    </div>
+
+</div>
+<br /><br /><br /><br />
+<h2 class="headers">Contact Us!</h2>
+<div class="aboutPage">For more information about how we can help you get a deeper assay analysis, reach out and we will give you the help you need. <br /><br /> (206) 448-8762<br />support@northwestlabs.com</div>
+
+

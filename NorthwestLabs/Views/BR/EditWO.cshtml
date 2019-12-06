@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "EditWO";
+    Layout = "~/Views/Shared/_BRLayout.cshtml";
 }
 
 <h2>Edit Work Order</h2>
@@ -73,7 +74,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Test2_IfActive, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            <div class="checkbox">
+            <div class="radio">
 
                 <span> No </span> @Html.RadioButtonFor(model => model.Test2_IfActive, false)
                 <br /><br />
@@ -87,7 +88,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Test2_IfInactive, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            <div class="checkbox">
+            <div class="radio">
 
                 <span> No </span> @Html.RadioButtonFor(model => model.Test2_IfInactive, false)
                 <br /><br />
@@ -110,7 +111,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Analysis_Completed, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            <div class="checkbox">
+            <div class="radio">
                 <span> No </span> @Html.RadioButtonFor(model => model.Analysis_Completed, false)
                 <br /><br />
                 <span> Yes </span>@Html.RadioButtonFor(model => model.Analysis_Completed, true)

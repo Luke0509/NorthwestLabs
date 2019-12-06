@@ -16,10 +16,37 @@ namespace NorthwestLabs.Controllers
 
         public static List<OrderStatus> lstStatus = new List<OrderStatus>();
         
-
         public ActionResult Index()
         {
-            return RedirectToAction("WorkOrders");
+            return View();
+        }
+
+        public ActionResult ViewTests()
+        {
+            return View(db.Tests);
+        }
+
+        [HttpGet]
+        public ActionResult CreateTest()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateTest([Bind(Include = "Test_ID, Test_Description, Test_Details, Test_Price")] Tests tests)
+        {
+            if (ModelState.IsValid)
+            {
+                //add entry
+                db.Tests.Add(tests);
+                //edit entries
+                //db.Entry(wo).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("WorkOrders");
+            }
+
+            return View(tests);
         }
 
         public ActionResult WorkOrders()
