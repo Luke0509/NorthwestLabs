@@ -9,6 +9,8 @@ using System.Web.Mvc;
 
 namespace NorthwestLabs.Controllers
 {
+    //This controller controls all of the Seattle employee views
+    [Authorize]
     public class SeattleEmployeeController : Controller
     {
         private LabContext db = new LabContext();

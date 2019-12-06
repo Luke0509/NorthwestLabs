@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace NorthwestLabs.Controllers
 {
+    //This controller controls all of the views for the billing and receivables rep
     [Authorize]
     public class BRController : Controller
     {

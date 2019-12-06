@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace NorthwestLabs.Controllers
 {
+    //This controller controls all of the tech director views, including analyzing results
     [Authorize]
     public class TechDirectorController : Controller
     {

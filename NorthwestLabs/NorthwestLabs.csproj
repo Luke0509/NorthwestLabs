@@ -199,6 +199,8 @@
     <Content Include="Views\SeattleEmployee\EditWO.cshtml" />
     <Content Include="Views\SeattleEmployee\SeePrice.cshtml" />
     <Content Include="Views\Customer\RequestQuote.cshtml" />
+    <Content Include="Views\Customer\CreateOrder.cshtml" />
+    <Content Include="Views\Customer\AddCompound.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

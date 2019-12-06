@@ -7,8 +7,8 @@ using System.Web.Mvc;
 
 namespace NorthwestLabs.Controllers
 {
+    //This controller controls all of the Singapore manager functionality. Most of the functionality is going to be implemented in the future
     [Authorize]
-    
     public class ManagerController : Controller
     {
         private LabContext db = new LabContext();

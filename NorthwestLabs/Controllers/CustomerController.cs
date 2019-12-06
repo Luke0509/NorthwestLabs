@@ -9,6 +9,7 @@ using System.Web.Security;
 
 namespace NorthwestLabs.Controllers
 {
+    //This controller controls all of the customer portal views
     [Authorize]
     public class CustomerController : Controller
     {

@@ -7,8 +7,14 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 
+/*
+ * Team Members: Seth Erickson, Miles Anderson, Joshua Thayne, Luke Forthman
+ * Date: 12/6/2019
+ * Group: 2-9
+*/
 namespace NorthwestLabs.Controllers
 {
+    //This controller controls all of the home views, including logging in
     public class HomeController : Controller
     {
         // GET: Home

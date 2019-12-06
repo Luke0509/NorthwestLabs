@@ -11,6 +11,7 @@ using System.Web.Mvc;
 
 namespace NorthwestLabs.Controllers
 {
+    //This controller controls all of the sales rep views, including logging in
     [Authorize]
     public class SalesRepController : Controller
     {

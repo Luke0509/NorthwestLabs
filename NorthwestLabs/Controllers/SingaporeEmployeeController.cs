@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace NorthwestLabs.Controllers
 {
+    //This controller controls all of the Singapore Employee views
     [Authorize]
     public class SingaporeEmployeeController : Controller
     {
