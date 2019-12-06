@@ -193,6 +193,7 @@
     <Content Include="Views\SeattleEmployee\EditAssay.cshtml" />
     <Content Include="Views\SeattleEmployee\CreateAssay.cshtml" />
     <Content Include="Views\SeattleEmployee\ProtoNotebook.cshtml" />
+    <Content Include="Views\Shared\_SeattleEmpLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
