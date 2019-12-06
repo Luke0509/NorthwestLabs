@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<NorthwestLabs.Models.Assay>
 
 @{
-    ViewBag.Title = "ProtoNotebook";
+    ViewBag.Title = "Protocol";
     Layout = "~/Views/Shared/_SeattleEmpLayout.cshtml";
 }
 
@@ -43,3 +43,4 @@
 }
 
 </table>
+<a class="btn btn-outline-danger my-2 my-sm-0" href="@Url.Action("ChooseCatalog", "SeattleEmployee")" style="font-size: 14px">Go Back</a>

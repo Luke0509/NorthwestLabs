@@ -1,14 +1,12 @@
 ﻿@model IEnumerable<NorthwestLabs.Models.WorkOrders>
 
 @{
-    ViewBag.Title = "MyOrders";
+    ViewBag.Title = "My Orders";
     Layout = "~/Views/Shared/_CustLayout.cshtml";
 }
 
 <h2>@ViewBag.Message</h2>
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 <table class="table">
     <tr>
         <th>

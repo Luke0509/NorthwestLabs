@@ -1,10 +1,8 @@
 ﻿@model IEnumerable<NorthwestLabs.Models.Customer>
-
 @{
-    ViewBag.Title = "AnalyzeResults";
+    ViewBag.Title = "Customers";
     Layout = "~/Views/Shared/_SalesLayout.cshtml";
 }
-
 <h2>Current Customers</h2>
 
 <p>
@@ -74,7 +72,6 @@
             </td>
             <td>
                 @Html.ActionLink("Edit", "EditCustomer", new { id = item.Cust_ID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Cust_ID }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.Cust_ID })
             </td>
         </tr>
