@@ -17,10 +17,10 @@
 
     @*Cust_ID - Dropdown List *@
         <div class="form-group">
-            @Html.LabelFor(model => model.Cust_ID, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Order_ID, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownListFor(model => model.Cust_ID, new SelectList(ViewBag.customers, "Cust_ID", "Cust_ID"), new { style = "height: 30px; " })
-                @Html.ValidationMessageFor(model => model.Cust_ID, "", new { @class = "text-danger" })
+                @Html.DropDownListFor(model => model.Order_ID, new SelectList(ViewBag.customers, "Cust_ID", "Cust_ID"), new { style = "height: 30px; " })
+                @Html.ValidationMessageFor(model => model.Order_ID, "", new { @class = "text-danger" })
             </div>
         </div>
 
