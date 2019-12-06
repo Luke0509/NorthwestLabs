@@ -14,7 +14,7 @@
         .fixed-bottom {
             position: fixed;
             right: 0;
-            bottom: 0;
+            bottom: 0
             left: 0;
             z-index: 1030;
             margin-bottom: 0;
@@ -23,17 +23,17 @@
 </head>
 <body class="myBody">
 
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white; font-family:'Solway', serif !important;">
         <a class="navbar-brand" href="@Url.Action("Index", "Home")">
             <img src="~/Content/Pictures/northwestlabs.png" width="180" height="50" class="d-inline-block align-top" alt="">
         </a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="@Url.Action("Index", "Home")">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="@Url.Action("Index", "SingaporeEmployee")">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="@Url.Action("Catalog", "Home")">Catalogs</a>
+                    <a class="nav-link" href="@Url.Action("ViewWorkOrders", "SingaporeEmployee")">Manage Work Orders</a>
                 </li>
 
             </ul>

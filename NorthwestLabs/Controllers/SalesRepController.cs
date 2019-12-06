@@ -20,9 +20,12 @@ namespace NorthwestLabs.Controllers
 
         public ActionResult Index()
         {
+            return View();
+        }
+        public ActionResult ViewCustomers()
+        {
             return View(db.Customers);
         }
-
         [HttpGet]
         public ActionResult CreateCustomer(int id)
         {

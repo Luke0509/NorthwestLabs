@@ -165,7 +165,7 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Manager\Index.cshtml" />
-    <Content Include="Views\SalesRep\Index.cshtml" />
+    <Content Include="Views\SalesRep\ViewCustomers.cshtml" />
     <Content Include="Views\TechDirector\Index.cshtml" />
     <Content Include="Views\Home\CreateCustomer.cshtml" />
     <Content Include="Views\SalesRep\ViewCosts.cshtml" />
@@ -183,8 +183,9 @@
     <Content Include="Views\Shared\_SalesLayout.cshtml" />
     <Content Include="Views\Shared\_TechDirLayout.cshtml" />
     <Content Include="Views\Shared\_SingaporeEmpLayout.cshtml" />
-    <Content Include="Views\Shared\_SeattleEmpLayout.cshtml" />
     <Content Include="Views\Shared\_ManagerLayout.cshtml" />
+    <Content Include="Views\SalesRep\EditCustomer.cshtml" />
+    <Content Include="Views\SalesRep\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -194,7 +195,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\SeattleEmployee\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
