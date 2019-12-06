@@ -19,7 +19,7 @@ namespace NorthwestLabs.Models
         [DisplayName("Order ID")]
         public int Order_ID { get; set; }
         [DisplayName("Date Submitted")]
-        public DateTime Date_Submitted { get; set; }
+        public DateTime Date_Arrived { get; set; }
         [DisplayName("Date Processed")]
         public DateTime? Date_Processed { get; set; }
         [DisplayName("Due Date")]
@@ -27,11 +27,9 @@ namespace NorthwestLabs.Models
         [DisplayName("Recorded Weight by Client")]
         public double Compound_Weight_Client { get; set; }
         [DisplayName("Actual Weight")]
-        public double Actual_Weight { get; set; }
-        [DisplayName("Quantity")]
-        public int Quantity { get; set; }
+        public double? Actual_Weight { get; set; }
         [DisplayName("Appearance")]
-        public string Compound_Appeareance { get; set; }
+        public string Compound_Appearance { get; set; }
         [DisplayName("Molecular Mass")]
         public double Molecular_Mass { get; set; }
     }
