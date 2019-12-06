@@ -1,5 +1,8 @@
 ﻿@model IEnumerable<NorthwestLabs.Models.Customer>
-
+@{
+    ViewBag.Title = "Customers";
+    Layout = "~/Views/Shared/_SalesLayout.cshtml";
+}
 <h2>Current Customers</h2>
 
 <p>
@@ -37,41 +40,41 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cust_First_Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cust_Last_Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cust_Address)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cust_City)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cust_State)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cust_Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cust_Phone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Account_Created_Date)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Cust_Discount)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "EditCustomer", new { id=item.Cust_ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Cust_ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Cust_ID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cust_First_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cust_Last_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cust_Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cust_City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cust_State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cust_Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cust_Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Account_Created_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cust_Discount)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditCustomer", new { id = item.Cust_ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Cust_ID })
+            </td>
+        </tr>
+    }
 
 </table>
