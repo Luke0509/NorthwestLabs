@@ -186,6 +186,8 @@
     <Content Include="Views\Shared\_ManagerLayout.cshtml" />
     <Content Include="Views\SalesRep\EditCustomer.cshtml" />
     <Content Include="Views\SalesRep\Index.cshtml" />
+    <Content Include="Views\Shared\_SeattleEmpLayout.cshtml" />
+    <Content Include="Views\SeattleEmployee\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -195,7 +197,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\SeattleEmployee\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
