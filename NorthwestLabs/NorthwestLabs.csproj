@@ -188,9 +188,12 @@
     <Content Include="Views\SalesRep\Index.cshtml" />
     <Content Include="Views\BR\Index.cshtml" />
     <Content Include="Views\BR\CreateTest.cshtml" />
-    <Content Include="Views\SeattleEmployee\EditWO.cshtml" />
-    <Content Include="Views\SeattleEmployee\Index.cshtml" />
-    <Content Include="Views\SeattleEmployee\ViewWorkOrders.cshtml" />
+    <Content Include="Views\SeattleEmployee\ChooseCatalog.cshtml" />
+    <Content Include="Views\SeattleEmployee\PharmaCatalog.cshtml" />
+    <Content Include="Views\SeattleEmployee\EditAssay.cshtml" />
+    <Content Include="Views\SeattleEmployee\CreateAssay.cshtml" />
+    <Content Include="Views\SeattleEmployee\ProtoNotebook.cshtml" />
+    <Content Include="Views\Shared\_SeattleEmpLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
