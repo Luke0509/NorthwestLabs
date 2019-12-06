@@ -1,0 +1,45 @@
+﻿@model IEnumerable<NorthwestLabs.Models.Tests>
+
+@{
+    ViewBag.Title = "Test Schedule";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+<h2>Test Schedule</h2>
+<p><em>Here is where the manager would manage the test schedules</em></p>
+
+<p>
+
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Test_Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Test_Details)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Test_Price)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Test_Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Test_Details)
+        </td>
+        <td>
+            $@Html.DisplayFor(modelItem => item.Test_Price)
+        </td>
+        <td>
+
+        </td>
+    </tr>
+}
+
+</table>
