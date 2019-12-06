@@ -24,7 +24,7 @@ namespace NorthwestLabs.Controllers
        
 
         public ActionResult MyOrders()
-        {
+        {   
             List<WorkOrders> lstWO = new List<WorkOrders>();
             ViewBag.Message = "Current Work Orders";
             foreach (WorkOrders workOrder in db.WorkOrders)
@@ -45,11 +45,10 @@ namespace NorthwestLabs.Controllers
             return View();
         }
 
-        public ActionResult PastOrders()
+        public ActionResult OrderProgress(int? id)
         {
-            ViewBag.Message = "Past Work Order";
 
-            return View();
+            return View(db.WorkOrders.Find(id));
         }
 
     }
