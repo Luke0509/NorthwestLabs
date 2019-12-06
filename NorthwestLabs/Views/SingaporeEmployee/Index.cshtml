@@ -1,44 +1,42 @@
-﻿@model IEnumerable<NorthwestLabs.Models.WorkOrders>
+﻿@model IEnumerable<NorthwestLabs.Models.Compound_Samples>
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Current Work Orders</h2>
+<h2>Compound Samples</h2>
 
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Cust_ID)
+            @Html.DisplayNameFor(model => model.Assay_ID)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Invoice_ID)
-        </th>
-  
-        <th>
-            @Html.DisplayNameFor(model => model.Date_Created)
+            @Html.DisplayNameFor(model => model.Order_ID)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Date_Completed)
+            @Html.DisplayNameFor(model => model.Date_Arrived)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.WO_Discount)
+            @Html.DisplayNameFor(model => model.Date_Processed)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Expedite_Order)
+            @Html.DisplayNameFor(model => model.Date_Due)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Test2_IfActive)
+            @Html.DisplayNameFor(model => model.Compound_Weight_Client)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Test2_IfInactive)
-        </th>
-  
-        <th>
-            @Html.DisplayNameFor(model => model.Analysis)
+            @Html.DisplayNameFor(model => model.Actual_Weight)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Analysis_Completed)
+            @Html.DisplayNameFor(model => model.Compound_Appearance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Molecular_Mass)
         </th>
         <th></th>
     </tr>
@@ -46,40 +44,35 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Cust_ID)
+            @Html.DisplayFor(modelItem => item.Assay_ID)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Invoice_ID)
-        </td>
-
-        <td>
-            @Html.DisplayFor(modelItem => item.Date_Created)
+            @Html.DisplayFor(modelItem => item.Order_ID)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Date_Completed)
+            @Html.DisplayFor(modelItem => item.Date_Arrived)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.WO_Discount)
+            @Html.DisplayFor(modelItem => item.Date_Processed)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Expedite_Order)
+            @Html.DisplayFor(modelItem => item.Date_Due)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Test2_IfActive)
+            @Html.DisplayFor(modelItem => item.Compound_Weight_Client)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Test2_IfInactive)
+            @Html.DisplayFor(modelItem => item.Actual_Weight)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Analysis)
+            @Html.DisplayFor(modelItem => item.Compound_Appearance)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Analysis_Completed)
+            @Html.DisplayFor(modelItem => item.Molecular_Mass)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Order_ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Order_ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Order_ID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.LT_Number })
+            
         </td>
     </tr>
 }
