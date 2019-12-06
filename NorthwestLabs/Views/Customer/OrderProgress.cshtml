@@ -5,4 +5,40 @@
     Layout = "~/Views/Shared/_CustLayout.cshtml";
 }
 
-<h2>Current Status</h2>
+<h1>Current Status for Order @Model.Order_ID</h1>
+
+@if (Model.Order_Status == null)
+{
+    <br />
+    <h2>Your order hasn't been received yet.</h2>
+    <br />
+    <img src="~/Content/Pictures/LoadBarEmpty.png" />
+}
+else if (Model.Order_Status == "Received")
+{
+    <br />
+    <h2>Your order has been received and is waiting for testing.</h2>
+    <br />
+    <img src="~/Content/Pictures/LoadBarReceived (1).png" />  
+}
+else if (Model.Order_Status == "Testing")
+{
+    <br />
+    <h2>Your order is being tested.</h2>
+    <br />
+    <img src="~/Content/Pictures/LoadBarTesting.png" />
+}
+else if (Model.Order_Status == "Finalizing Reports")
+{
+    <br />
+    <h2>Testing is finished and the reports are being finalized.</h2>
+    <br />
+    <img src="~/Content/Pictures/LoadBarFinalizing.png" />
+}
+else if (Model.Order_Status == "Finished")
+{
+    <br />
+    <h2>Your order is finished!</h2>
+    <br />
+    <img src="~/Content/Pictures/LoadBarFinished.png" />
+}
