@@ -71,33 +71,7 @@
         </div>
     </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Test2_IfActive, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            <div class="radio">
 
-                <span> No </span> @Html.RadioButtonFor(model => model.Test2_IfActive, false)
-                <br /><br />
-                <span> Yes </span>@Html.RadioButtonFor(model => model.Test2_IfActive, true)
-
-                @Html.ValidationMessageFor(model => model.Test2_IfActive, "", new { @class = "text-danger" })
-            </div>
-        </div>
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.Test2_IfInactive, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            <div class="radio">
-
-                <span> No </span> @Html.RadioButtonFor(model => model.Test2_IfInactive, false)
-                <br /><br />
-                <span> Yes </span>@Html.RadioButtonFor(model => model.Test2_IfInactive, true)
-
-                @Html.ValidationMessageFor(model => model.Test2_IfInactive, "", new { @class = "text-danger" })
-            </div>
-        </div>
-    </div>
 
     <div class="form-group">
         @Html.LabelFor(model => model.Analysis, htmlAttributes: new { @class = "control-label col-md-2" })

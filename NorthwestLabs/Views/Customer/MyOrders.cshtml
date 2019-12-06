@@ -6,9 +6,6 @@
 }
 
 <h2>@ViewBag.Message</h2>
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -71,7 +68,8 @@
             @Html.DisplayFor(modelItem => item.Analysis_Completed)
         </td>
         <td>
-            @Html.ActionLink("View Progress", "OrderProgress", new { id=item.Order_ID })
+            @Html.ActionLink("View Progress", "OrderProgress", new { id = item.Order_ID })
+            @Html.ActionLink("Add Compound", "AddCompound", new { id = item.Order_ID })
         </td>
     </tr>
 }
