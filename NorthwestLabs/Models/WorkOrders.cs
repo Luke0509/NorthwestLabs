@@ -29,10 +29,8 @@ namespace NorthwestLabs.Models
         [DisplayName("Order Status")]
         public string Order_Status { get; set; }
 
-        [Required]
         [DisplayName("Work Order Discount")]
         public double WO_Discount { get; set; }
-
         
         [Required]
         [DisplayName("Order Expedited")]

@@ -20,7 +20,7 @@ namespace NorthwestLabs.Controllers
         // GET: Home
         private Customer currentCust = new Customer();
         private Employee currentEmployee = new Employee();
-
+        private static List<States> lstStates = new List<States>();
 
         private LabContext db = new LabContext();
         public ActionResult Index()

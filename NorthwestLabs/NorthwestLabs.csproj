@@ -149,6 +149,7 @@
     <Compile Include="Models\OrderStatus.cs" />
     <Compile Include="Models\Order_Details.cs" />
     <Compile Include="Models\Payment_Information.cs" />
+    <Compile Include="Models\States.cs" />
     <Compile Include="Models\Tests.cs" />
     <Compile Include="Models\WorkOrders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

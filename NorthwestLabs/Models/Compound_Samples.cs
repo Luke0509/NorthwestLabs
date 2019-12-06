@@ -14,6 +14,7 @@ namespace NorthwestLabs.Models
         [Key]
         [DisplayName("LT_Number")]
         public int LT_Number { get; set; }
+        
         [DisplayName("Assay ID")]
         public int Assay_ID { get; set; }
         [DisplayName("Order ID")]
@@ -24,12 +25,15 @@ namespace NorthwestLabs.Models
         public DateTime? Date_Processed { get; set; }
         [DisplayName("Due Date")]
         public DateTime Date_Due { get; set; }
+        [Required(ErrorMessage = "This field is required")]
         [DisplayName("Recorded Weight by Client")]
         public double Compound_Weight_Client { get; set; }
         [DisplayName("Actual Weight")]
         public double? Actual_Weight { get; set; }
+        [Required(ErrorMessage = "This field is required")]
         [DisplayName("Appearance")]
         public string Compound_Appearance { get; set; }
+        [Required(ErrorMessage = "This field is required")]
         [DisplayName("Molecular Mass")]
         public double Molecular_Mass { get; set; }
     }
