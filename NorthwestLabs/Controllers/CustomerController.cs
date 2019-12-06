@@ -91,5 +91,10 @@ namespace NorthwestLabs.Controllers
             return View(db.WorkOrders.Find(id));
         }
 
+        public ActionResult RequestQuote()
+        {
+            return View();
+        }
+
     }
 }

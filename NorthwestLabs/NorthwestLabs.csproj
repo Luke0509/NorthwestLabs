@@ -99,6 +99,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Pictures\Form.PNG" />
     <Content Include="Content\Pictures\LoadBarEmpty.png" />
     <Content Include="Content\Pictures\LoadBarFinalizing.png" />
     <Content Include="Content\Pictures\LoadBarFinished.png" />
@@ -197,6 +198,7 @@
     <Content Include="Views\SeattleEmployee\Index.cshtml" />
     <Content Include="Views\SeattleEmployee\EditWO.cshtml" />
     <Content Include="Views\SeattleEmployee\SeePrice.cshtml" />
+    <Content Include="Views\Customer\RequestQuote.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

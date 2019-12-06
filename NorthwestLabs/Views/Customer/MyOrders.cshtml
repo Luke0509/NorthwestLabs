@@ -68,7 +68,7 @@
             @Html.DisplayFor(modelItem => item.Analysis_Completed)
         </td>
         <td>
-            @Html.ActionLink("View Progress", "OrderProgress", new { id = item.Order_ID })
+            @Html.ActionLink("View Progress", "OrderProgress", new { id = item.Order_ID }) <br />
             @Html.ActionLink("Add Compound", "AddCompound", new { id = item.Order_ID })
         </td>
     </tr>
