@@ -5,10 +5,19 @@
 }
 
 <h2>Price Breakdown</h2>
+<hr />
 
 <ul>
     @foreach (var entry in ViewBag.entries)
     {
-    <li>LT @entry.LT_Number : $@entry.Item_Price</li>
+        
+        <li><h3>LT @entry.LT_Number : $@entry.Item_Price</h3></li>
     }
 </ul>
+<br />
+<br />
+<br />
+
+<div>
+    @Html.ActionLink("Back", "ViewWorkOrders", "SeattleEmploeyee", new { @class = "btn btn-outline-danger my-2 my-sm-0", style = "font-size: 18px;" })
+</div>
