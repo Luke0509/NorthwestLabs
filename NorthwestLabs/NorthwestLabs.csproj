@@ -166,7 +166,7 @@
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Manager\Index.cshtml" />
     <Content Include="Views\SalesRep\ViewCustomers.cshtml" />
-    <Content Include="Views\TechDirector\Index.cshtml" />
+    <Content Include="Views\TechDirector\ViewOrders.cshtml" />
     <Content Include="Views\Home\CreateCustomer.cshtml" />
     <Content Include="Views\SalesRep\ViewCosts.cshtml" />
     <Content Include="Views\BR\ViewTests.cshtml" />
@@ -188,6 +188,8 @@
     <Content Include="Views\SalesRep\Index.cshtml" />
     <Content Include="Views\BR\Index.cshtml" />
     <Content Include="Views\BR\CreateTest.cshtml" />
+    <Content Include="Views\TechDirector\EditWO.cshtml" />
+    <Content Include="Views\TechDirector\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
