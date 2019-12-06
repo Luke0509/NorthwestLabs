@@ -173,11 +173,17 @@
     <Content Include="Views\BR\CreateWO.cshtml" />
     <Content Include="Views\BR\EditWO.cshtml" />
     <Content Include="Views\Shared\_CustLayout.cshtml" />
-    <Content Include="Views\Shared\_EmpLayout.cshtml" />
+    <Content Include="Views\Shared\_BRLayout.cshtml" />
     <Content Include="Views\Customer\MyOrders.cshtml" />
     <Content Include="Views\SingaporeEmployee\Index.cshtml" />
     <Content Include="Views\SingaporeEmployee\Create.cshtml" />
     <Content Include="Views\SingaporeEmployee\Edit.cshtml" />
+    <Content Include="Views\Customer\OrderProgress.cshtml" />
+    <Content Include="Views\Shared\_SalesLayout.cshtml" />
+    <Content Include="Views\Shared\_TechDirLayout.cshtml" />
+    <Content Include="Views\Shared\_SingaporeEmpLayout.cshtml" />
+    <Content Include="Views\Shared\_SeattleEmpLayout.cshtml" />
+    <Content Include="Views\Shared\_ManagerLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
