@@ -20,7 +20,11 @@ namespace NorthwestLabs.Controllers
         }
         // Method to edit work order
 
-        
+        public ActionResult ViewWorkOrders()
+        {
+            return View();
+        }
+
 
         [HttpGet]
         public ActionResult EditWO(int id)
