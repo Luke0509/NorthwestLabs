@@ -22,6 +22,7 @@ namespace NorthwestLabs.Models
         [DisplayName("Invoice ID")]
         public int Invoice_ID { get; set; }
 
+        [Required]
         [DisplayName("Date Created")]
         public DateTime Date_Created { get; set; }
 
@@ -31,25 +32,27 @@ namespace NorthwestLabs.Models
         [DisplayName("Order Status")]
         public string Order_Status { get; set; }
 
+        [Required]
         [DisplayName("Work Order Discount")]
         public double WO_Discount { get; set; }
 
-        [Range(0, 1)]
+        
+        [Required]
         [DisplayName("Order Expedited")]
         public bool Expedite_Order { get; set; }
 
-        [Range(0, 1)]
+        [Required]
         [DisplayName("Run Secondary Tests on Active?")]
         public bool Test2_IfActive { get; set; }
 
-        [Range(0, 1)]
+        [Required]
         [DisplayName("Run Secondary Tests on Inactive?")]
         public bool Test2_IfInactive { get; set; }
 
         [DisplayName("Comments/Analysis")]
         public string Analysis { get; set; }
 
-        [Range(0,1)]
+        [Required]
         [DisplayName("Analysis Completed")]
         public bool Analysis_Completed { get; set; }
     }
