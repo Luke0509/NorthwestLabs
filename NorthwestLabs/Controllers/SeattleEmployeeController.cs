@@ -114,5 +114,11 @@ namespace NorthwestLabs.Controllers
 
             return View(wo);
         }
+
+        [HttpGet]
+        public ActionResult ChooseCatalog()
+        {
+            return View();
+        }
     }
 }
