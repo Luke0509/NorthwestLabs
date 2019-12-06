@@ -1,0 +1,58 @@
+﻿@model IEnumerable<NorthwestLabs.Models.WorkOrders>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TechDirLayout.cshtml";
+}
+
+<h2>Current Work </h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Order_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cust_ID)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Completed)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Analysis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Analysis_Completed)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Order_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cust_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_Completed)
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Analysis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Analysis_Completed)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditWO", new { id = item.Order_ID })
+
+
+        </td>
+    </tr>
+}
+
+</table>
