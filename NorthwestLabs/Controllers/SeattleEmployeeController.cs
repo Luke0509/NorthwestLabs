@@ -22,7 +22,7 @@ namespace NorthwestLabs.Controllers
 
         public ActionResult ViewWorkOrders()
         {
-            return View();
+            return View(db.WorkOrders);
         }
 
 
