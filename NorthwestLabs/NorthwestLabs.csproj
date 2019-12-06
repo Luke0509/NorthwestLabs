@@ -188,6 +188,8 @@
     <Content Include="Views\SalesRep\Index.cshtml" />
     <Content Include="Views\Shared\_SeattleEmpLayout.cshtml" />
     <Content Include="Views\SeattleEmployee\Index.cshtml" />
+    <Content Include="Views\SeattleEmployee\ViewWorkOrders.cshtml" />
+    <Content Include="Views\SeattleEmployee\EditWO.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
