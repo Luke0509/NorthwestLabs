@@ -53,5 +53,14 @@ namespace NorthwestLabs.Controllers
 
             return View();
         }
+
+        [HttpGet]
+        public ActionResult AnalyzeWO(int id)
+        {
+            var entry = db.Order_Details.Where(p => p.Order_ID == id).ToList();
+            ViewBag.entries = entry;
+            ViewBag.idNum = id;
+            return View();
+        }
     }
 }

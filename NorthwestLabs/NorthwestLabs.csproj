@@ -198,6 +198,7 @@
     <Content Include="Views\SeattleEmployee\Index.cshtml" />
     <Content Include="Views\SeattleEmployee\EditWO.cshtml" />
     <Content Include="Views\SeattleEmployee\SeePrice.cshtml" />
+    <Content Include="Views\TechDirector\AnalyzeWO.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
