@@ -1,0 +1,39 @@
+﻿@model IEnumerable<NorthwestLabs.Models.Tests>
+
+@{
+    ViewBag.Title = "ViewTests";
+    Layout = "~/Views/Shared/_BRLayout.cshtml";
+}
+
+<h2>Current Tests</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Test_Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Test_Details)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Test_Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Test_Details)
+            </td>
+
+        </tr>
+    }
+
+    <p>
+        @Html.ActionLink("Create New Test", "CreateTest")
+    </p>
+
+</table>
